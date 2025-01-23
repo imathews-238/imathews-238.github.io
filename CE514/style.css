@@ -34,6 +34,12 @@ header h2 {
     margin-top: 10px;
 }
 
+map {
+            height: 500px; /* Ensures the map is visible */
+            width: 100%;
+            margin: 20px 0;
+            border: 2px solid #ccc; /* Optional styling */
+        }
 main {
     padding: 20px;
     width: 80%;
