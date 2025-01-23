@@ -6,12 +6,22 @@
     <title>Leaflet Map Page</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-        crossorigin=""/>
-     <!-- Make sure you put this AFTER Leaflet's CSS -->
-     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-         crossorigin=""></script>
-    <link rel="stylesheet" type="text/css" href="https://imathews-238.github.io/CE514/style.css" />
+        crossorigin="anonymous"/>
+    <!-- Leaflet JavaScript (Ensure placed AFTER Leaflet CSS) -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin="anonymous"></script>
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="https://imathews-238.github.io/CE514/style.css">
+    <style>
+        /* Inline styling for the map element */
+        #map {
+            height: 500px; /* Ensures the map is visible */
+            width: 100%;
+            margin: 20px 0;
+            border: 2px solid #ccc; /* Optional styling */
+        }
+    </style>
 </head>
 <body>
 
@@ -25,22 +35,39 @@
         This page features an interactive Leaflet map to visualize geographic data dynamically. Explore the map below to view spatial details.
     </p>
 
+    <!-- Map container -->
     <div id="map"></div>
+    
     <script>
+        // Initialize the map and set its view
         var map = L.map('map').setView([51.505, -0.09], 13);
+
+        // Add a tile layer from OpenStreetMap
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
-            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
 
+        // Add a marker to the map
         var marker = L.marker([51.5, -0.09]).addTo(map);
+        marker.bindPopup("<b>Hello!</b><br>I am a marker.").openPopup();
+
+        // Add a circle to the map
         var circle = L.circle([51.508, -0.11], {
             color: 'red',
             fillColor: '#f03',
             fillOpacity: 0.5,
             radius: 500
         }).addTo(map);
-        
+        circle.bindPopup("I am a circle.");
+
+        // Add a polygon to the map (example)
+        var polygon = L.polygon([
+            [51.509, -0.08],
+            [51.503, -0.06],
+            [51.51, -0.047]
+        ]).addTo(map);
+        polygon.bindPopup("I am a polygon.");
     </script>
 </main>
 
