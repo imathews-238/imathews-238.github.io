@@ -40,6 +40,31 @@ main {
     max-width: 900px;
 }
 
+table {
+    margin: auto;
+    border-collapse: collapse;
+    width: 80%;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+thead tr {
+    background-color: #f2f2f2;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+th {
+    text-align: left;
+}
+
+tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
 .welcome,
 .intro {
     font-size: 1.2rem;
