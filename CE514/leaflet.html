@@ -1,117 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Leaflet JavaScript Map</title>
-
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-        crossorigin="anonymous"/>
-    <!-- Leaflet JavaScript (Ensure placed AFTER Leaflet CSS) -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-        crossorigin="anonymous"></script>
-    <!-- Custom stylesheet -->
+    <title>Interactive Map of Colorado Springs</title>
     <link rel="stylesheet" href="https://imathews-238.github.io/CE514/style.css">
-    </head>
-<header>
-    <h1>CE 514: Homework A5 - Build an Interactive Page with Leaflet Open Source Mapping API</h1>
-    <h2>Ian Mathews, Janaury 23, 2025</h2>
-</header>
-  
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha384-o9oR26XtTqj8n9Y2WtLST2zVfxdpPEhXwJ48Q5Qq41aTRV6bXGp91fm2o36GPW23" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha384-5a4HHyQ7qRfCBYrlInJXrmLD+BGeFmfZrQ9HY2qh9VVj6YTdO+m26jg0h9L5ALbH" crossorigin=""></script>
+</head>
 <body>
-<main>
-    <p>
-        This is a Map of my hometown in Colorado Springs. 
-    </p>
+    <header>
+        <h1>Interactive Map of Colorado Springs</h1>
+        <p>CE 514 | Assignment: Interactive Map | Date: January 23, 2025</p>
+    </header>
 
-    <!-- Map container -->
-    <div id="map"></div>
-    
-<div id="map"></div>
-    <div>
-        <label for="latitude">Latitude:</label>
-        <input type="number" id="latitude" name="latitude">
-        <label for="longitude">Longitude:</label>
-        <input type="number" id="longitude" name="longitude">
-        <button id="submit-button">Draw Point</button>
-    </div>
+    <div id="map" style="height: 600px; margin: 20px 0;"></div>
 
-    <!-- Leaflet JavaScript -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <section>
+        <h2>Calculate Distance</h2>
+        <form id="distanceForm">
+            <label for="point1">Point 1 (Lat, Lng):</label>
+            <input type="text" id="point1" placeholder="e.g., 38.8339, -104.8214" required>
+
+            <label for="point2">Point 2 (Lat, Lng):</label>
+            <input type="text" id="point2" placeholder="e.g., 38.8462, -104.7919" required>
+
+            <button type="submit">Calculate Distance</button>
+        </form>
+        <p id="distanceResult"></p>
+    </section>
+
     <script>
-        // Initialize the map
-        var map = L.map('map').setView([39.32, -111.69], 7); // Centered on Utah
+        const map = L.map('map').setView([38.8339, -104.8214], 13);
 
-        // Add a tile layer (base map) from OpenStreetMap
+        // Add tile layer
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
 
-        // 1. Red Circle around Provo, Utah
-        var circle = L.circle([40.2338, -111.6585], {
-            color: 'red',
-            fillColor: '#f03',
-            fillOpacity: 0.5,
-            radius: 10000 // 10 km in meters
-        }).addTo(map);
-        circle.bindPopup("Provo, Utah");
-
-        // 2. Blue Polyline between Provo and St. George
-        var polyline = L.polyline([
-            [40.2338, -111.6585], // Provo
-            [37.0965, -113.5684]  // St. George
-        ], {
-            color: 'blue'
-        }).addTo(map);
-        polyline.bindPopup("A Road between Provo and St. George");
-
-        // 3. Polygon representing Utah's shape
-        var utahCoords = [
-            [42.00, -114.05],
-            [42.00, -111.05],
-            [41.00, -111.05],
-            [41.00, -109.05],
-            [38.50, -109.05],
-            [37.00, -109.05],
-            [37.00, -114.05]
+        // Add markers
+        const locations = [
+            { coords: [38.8339, -104.8214], name: "My House" },
+            { coords: [38.8462, -104.7919], name: "My School" },
+            { coords: [38.8784, -104.8690], name: "Garden of the Gods Visitor Center" }
         ];
-        var polygon = L.polygon(utahCoords, {
+
+        locations.forEach(location => {
+            L.marker(location.coords).addTo(map).bindPopup(`<b>${location.name}</b>`);
+        });
+
+        // Add polygon for house boundary
+        const houseBoundary = [
+            [38.8341, -104.8210],
+            [38.8341, -104.8218],
+            [38.8337, -104.8218],
+            [38.8337, -104.8210]
+        ];
+        L.polygon(houseBoundary, { color: 'blue' }).addTo(map).bindPopup("My House Boundary");
+
+        // Add circle for 10-minute walking radius
+        L.circle([38.8339, -104.8214], {
+            radius: 800,
             color: 'green',
-            fillColor: '#0f0',
-            fillOpacity: 0.3
-        }).addTo(map);
-        polygon.bindPopup("Utah");
+            fillColor: '#8FBC8F',
+            fillOpacity: 0.5
+        }).addTo(map).bindPopup("10-minute walking radius");
 
-        // Function to create a triangle marker
-        function createTriangleIcon() {
-            return L.divIcon({
-                className: 'triangle',
-                iconSize: [16, 16]
-            });
-        }
+        // Calculate distance and draw line
+        document.getElementById('distanceForm').addEventListener('submit', function (e) {
+            e.preventDefault();
 
-        // Add marker on form submission
-        document.getElementById('submit-button').addEventListener('click', function() {
-            var lat = parseFloat(document.getElementById('latitude').value);
-            var lng = parseFloat(document.getElementById('longitude').value);
+            const point1Input = document.getElementById('point1').value.split(',').map(Number);
+            const point2Input = document.getElementById('point2').value.split(',').map(Number);
 
-            if (!isNaN(lat) && !isNaN(lng)) {
-                var marker = L.marker([lat, lng], {
-                  icon: createTriangleIcon()
-                }).addTo(map);
-                marker.bindPopup("Marker at [" + lat + ", " + lng + "]");
-            } else {
-                alert('Please enter valid coordinates.');
-            }
+            const point1 = L.latLng(point1Input[0], point1Input[1]);
+            const point2 = L.latLng(point2Input[0], point2Input[1]);
+
+            // Add markers for the entered points
+            L.marker(point1).addTo(map).bindPopup("Point 1").openPopup();
+            L.marker(point2).addTo(map).bindPopup("Point 2").openPopup();
+
+            // Draw a line between the points
+            L.polyline([point1, point2], { color: 'red' }).addTo(map);
+
+            // Haversine formula to calculate distance
+            const R = 6371; // Earth's radius in km
+            const toRadians = deg => deg * (Math.PI / 180);
+
+            const lat1 = toRadians(point1.lat);
+            const lon1 = toRadians(point1.lng);
+            const lat2 = toRadians(point2.lat);
+            const lon2 = toRadians(point2.lng);
+
+            const dLat = lat2 - lat1;
+            const dLon = lon2 - lon1;
+
+            const a = Math.sin(dLat / 2) ** 2 +
+                      Math.cos(lat1) * Math.cos(lat2) *
+                      Math.sin(dLon / 2) ** 2;
+            const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+            const distance = R * c;
+
+            document.getElementById('distanceResult').textContent = `Distance: ${distance.toFixed(2)} km`;
         });
     </script>
-</main>
-
-<footer>
-    <p>&copy; 2025 Ian Mathews. All rights reserved.</p>
-</footer>
-
 </body>
 </html>
