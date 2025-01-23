@@ -2,37 +2,102 @@
 <html>
 <head>
   <title>JavaScript Test</title>
-<link rel="stylesheet" type="text/css" href="https://imathews-238.github.io/CE514/style.css" />
+  <link rel="stylesheet" type="text/css" href="https://imathews-238.github.io/CE514/style.css" />
 </head>
 
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f8ff;
-    color: #333;
-    text-align: center;
-  }
-  h1 {
-    color: #004080;
-  }
-  input, select {
-    margin: 10px 0;
-  }
-  #result {
-    font-weight: bold;
-    margin-top: 20px;
-  }
-    body {
-    background: linear-gradient(to bottom, #e0f7fa, #ffffff);
-  }
-</style>
-  
 <body>
-  <h1>This is my JavaScript Test</h1>
+  <header>
+    <h1>This is my JavaScript Test</h1>
+  </header>
 
-  <p>This is a paragraph</p>
+  <main>
+    <section>
+      <p>This is a paragraph</p>
+      <p id="time"></p>
+    </section>
 
-  <p id="time"></p> 
+    <section>
+      <h1>Unit Converter</h1>  
+
+      <label for="inputnumber">Input Value:</label>
+      <input type="text" id="inputnumber"><br><br>
+
+      <label for="Units">Input Unit:</label>
+      <select id="Units">
+        <option value="in">Inches (in)</option>
+        <option value="ft">Feet (ft)</option>
+        <option value="yd">Yards (yd)</option>
+        <option value="mi">Miles (mi)</option>
+        <option value="m">Meters (m)</option>
+        <option value="km">Kilometers (km)</option>
+      </select><br><br>
+
+      <label for="TargetUnits">Convert to:</label>
+      <select id="TargetUnits">
+        <option value="in">Inches (in)</option>
+        <option value="ft">Feet (ft)</option>
+        <option value="yd">Yards (yd)</option>
+        <option value="mi">Miles (mi)</option>
+        <option value="m">Meters (m)</option>
+        <option value="km">Kilometers (km)</option>
+      </select><br><br>
+
+      <input type="button" value="Convert" onclick="convert_units()">
+
+      <p id="result"></p>
+    </section>
+
+    <section>
+      <h2>Common Unit Conversions</h2>
+      <p>Use the table below as a reference for common distance conversions:</p>
+
+      <table class="conversion-table">
+        <thead>
+          <tr>
+            <th>From</th>
+            <th>To</th>
+            <th>Conversion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1 inch</td>
+            <td>Feet</td>
+            <td>0.0833 feet</td>
+          </tr>
+          <tr>
+            <td>1 foot</td>
+            <td>Inches</td>
+            <td>12 inches</td>
+          </tr>
+          <tr>
+            <td>1 yard</td>
+            <td>Feet</td>
+            <td>3 feet</td>
+          </tr>
+          <tr>
+            <td>1 mile</td>
+            <td>Kilometers</td>
+            <td>1.609 kilometers</td>
+          </tr>
+          <tr>
+            <td>1 meter</td>
+            <td>Inches</td>
+            <td>39.37 inches</td>
+          </tr>
+          <tr>
+            <td>1 kilometer</td>
+            <td>Miles</td>
+            <td>0.621 miles</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Your Name</p>
+  </footer>
 
   <script>
     function displayTime() {
@@ -47,44 +112,9 @@
       }
     }
 
-    // Display time initially
     displayTime();
-
-    // Update time every second
     setInterval(displayTime, 1000); 
-  </script>
-  
-<h1>
-Unit Converter
-</h1>  
 
-  Input Value: <input type="text" id="inputnumber"><br><br>
-
-  <label for="Units">Input Unit:</label>
-  <select id="Units">
-    <option value="in">Inches (in)</option>
-    <option value="ft">Feet (ft)</option>
-    <option value="yd">Yards (yd)</option>
-    <option value="mi">Miles (mi)</option>
-    <option value="m">Meters (m)</option>
-    <option value="km">Kilometers (km)</option>
-  </select><br><br>
-
-  <label for="TargetUnits">Convert to:</label>
-  <select id="TargetUnits">
-    <option value="in">Inches (in)</option>
-    <option value="ft">Feet (ft)</option>
-    <option value="yd">Yards (yd)</option>
-    <option value="mi">Miles (mi)</option>
-    <option value="m">Meters (m)</option>
-    <option value="km">Kilometers (km)</option>
-  </select><br><br>
-
-  <input type="button" value="Convert" onclick="convert_units()">
-
-  <p id="result"></p>
-
-  <script>
     function convert_units() {
       const inputValue = parseFloat(document.getElementById("inputnumber").value);
       const inputUnit = document.getElementById("Units").value;
@@ -109,50 +139,5 @@ Unit Converter
         `${inputValue} ${inputUnit} = ${convertedValue.toFixed(2)} ${targetUnit}`;
     }
   </script>
-<h2>Common Unit Conversions</h2>
-<p>Use the table below as a reference for common distance conversions:</p>
-
-<table style="margin: auto; border-collapse: collapse; width: 80%; text-align: left; border: 1px solid #ccc;">
-  <thead>
-    <tr style="background-color: #f2f2f2;">
-      <th style="padding: 10px; border: 1px solid #ccc;">From</th>
-      <th style="padding: 10px; border: 1px solid #ccc;">To</th>
-      <th style="padding: 10px; border: 1px solid #ccc;">Conversion</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="padding: 10px; border: 1px solid #ccc;">1 inch</td>
-      <td style="padding: 10px; border: 1px solid #ccc;">Feet</td>
-      <td style="padding: 10px; border: 1px solid #ccc;">0.0833 feet</td>
-    </tr>
-    <tr>
-      <td style="padding: 10px; border: 1px solid #ccc;">1 foot</td>
-      <td style="padding: 10px; border: 1px solid #ccc;">Inches</td>
-      <td style="padding: 10px; border: 1px solid #ccc;">12 inches</td>
-    </tr>
-    <tr>
-      <td style="padding: 10px; border: 1px solid #ccc;">1 yard</td>
-      <td style="padding: 10px; border: 1px solid #ccc;">Feet</td>
-      <td style="padding: 10px; border: 1px solid #ccc;">3 feet</td>
-    </tr>
-    <tr>
-      <td style="padding: 10px; border: 1px solid #ccc;">1 mile</td>
-      <td style="padding: 10px; border: 1px solid #ccc;">Kilometers</td>
-      <td style="padding: 10px; border: 1px solid #ccc;">1.609 kilometers</td>
-    </tr>
-    <tr>
-      <td style="padding: 10px; border: 1px solid #ccc;">1 meter</td>
-      <td style="padding: 10px; border: 1px solid #ccc;">Inches</td>
-      <td style="padding: 10px; border: 1px solid #ccc;">39.37 inches</td>
-    </tr>
-    <tr>
-      <td style="padding: 10px; border: 1px solid #ccc;">1 kilometer</td>
-      <td style="padding: 10px; border: 1px solid #ccc;">Miles</td>
-      <td style="padding: 10px; border: 1px solid #ccc;">0.621 miles</td>
-    </tr>
-  </tbody>
-</table>
-
 </body>
 </html>
