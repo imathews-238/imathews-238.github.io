@@ -29,36 +29,83 @@
     <!-- Map container -->
     <div id="map"></div>
     
-    <script>
-        // Initialize the map and set its view
-        var map = L.map('map').setView([51.505, -0.09], 13);
+<div id="map"></div>
+    <div>
+        <label for="latitude">Latitude:</label>
+        <input type="number" id="latitude" name="latitude">
+        <label for="longitude">Longitude:</label>
+        <input type="number" id="longitude" name="longitude">
+        <button id="submit-button">Draw Point</button>
+    </div>
 
-        // Add a tile layer from OpenStreetMap
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script>
+        // Initialize the map
+        var map = L.map('map').setView([39.32, -111.69], 7); // Centered on Utah
+
+        // Add a tile layer (base map) from OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
 
-        // Add a marker to the map
-        var marker = L.marker([51.5, -0.09]).addTo(map);
-        marker.bindPopup("<b>Hello!</b><br>I am a marker.").openPopup();
-
-        // Add a circle to the map
-        var circle = L.circle([51.508, -0.11], {
+        // 1. Red Circle around Provo, Utah
+        var circle = L.circle([40.2338, -111.6585], {
             color: 'red',
             fillColor: '#f03',
             fillOpacity: 0.5,
-            radius: 500
+            radius: 10000 // 10 km in meters
         }).addTo(map);
-        circle.bindPopup("I am a circle.");
+        circle.bindPopup("Provo, Utah");
 
-        // Add a polygon to the map (example)
-        var polygon = L.polygon([
-            [51.509, -0.08],
-            [51.503, -0.06],
-            [51.51, -0.047]
-        ]).addTo(map);
-        polygon.bindPopup("I am a polygon.");
+        // 2. Blue Polyline between Provo and St. George
+        var polyline = L.polyline([
+            [40.2338, -111.6585], // Provo
+            [37.0965, -113.5684]  // St. George
+        ], {
+            color: 'blue'
+        }).addTo(map);
+        polyline.bindPopup("A Road between Provo and St. George");
+
+        // 3. Polygon representing Utah's shape
+        var utahCoords = [
+            [42.00, -114.05],
+            [42.00, -111.05],
+            [41.00, -111.05],
+            [41.00, -109.05],
+            [38.50, -109.05],
+            [37.00, -109.05],
+            [37.00, -114.05]
+        ];
+        var polygon = L.polygon(utahCoords, {
+            color: 'green',
+            fillColor: '#0f0',
+            fillOpacity: 0.3
+        }).addTo(map);
+        polygon.bindPopup("Utah");
+
+        // Function to create a triangle marker
+        function createTriangleIcon() {
+            return L.divIcon({
+                className: 'triangle',
+                iconSize: [16, 16]
+            });
+        }
+
+        // Add marker on form submission
+        document.getElementById('submit-button').addEventListener('click', function() {
+            var lat = parseFloat(document.getElementById('latitude').value);
+            var lng = parseFloat(document.getElementById('longitude').value);
+
+            if (!isNaN(lat) && !isNaN(lng)) {
+                var marker = L.marker([lat, lng], {
+                  icon: createTriangleIcon()
+                }).addTo(map);
+                marker.bindPopup("Marker at [" + lat + ", " + lng + "]");
+            } else {
+                alert('Please enter valid coordinates.');
+            }
+        });
     </script>
 </main>
 
