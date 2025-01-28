@@ -75,6 +75,12 @@ tbody tr:hover {
     background-color: #f9f9f9;
 }
 
+.my_img {
+    max-width: 200px;
+    border-radius: 50%;
+    margin: 20px auto;
+    display: block;
+}
 .welcome,
 .intro {
     font-size: 1.2rem;
