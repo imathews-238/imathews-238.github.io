@@ -36,18 +36,18 @@
     </main>
     <script>
         // Initialize the map and set view to Colorado Springs coordinates
-        const map = L.map('map').setView([38.8339, -104.8214], 13);
+        const map = L.map('map');
 
         // Add OpenStreetMap tiles
-                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                }).addTo(map);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
 
         // Add point markers with popups for Colorado Springs locations
         const locations = [
-            { name: "My House", coords: [38.8339, -104.8214] },
-            { name: "My School", coords: [38.8462, -104.8007] },
-            { name: "My Church", coords: [38.8283, -104.8401] },
+            { name: "My House", coords: [38.90161464861117, -104.7712603022105] },
+            { name: "William J. Palmer High School", coords: [38.839422463309546, -104.82074570592077] },
+            { name: "Church of Jesus Christ of Latter-day Saints", coords: [38.87115396280131, -104.79815034137457] },
             { name: "Garden of the Gods", coords: [38.8783, -104.8691] },
             { name: "Pikes Peak", coords: [38.8409, -105.0423] }
         ];
@@ -58,15 +58,15 @@
 
         // Add polygon for home property boundaries
         const homeBoundary = [
-            [38.8340, -104.8220],
-            [38.8340, -104.8208],
-            [38.8338, -104.8208],
-            [38.8338, -104.8220]
+            [38.9017, -104.7714],
+            [38.9017, -104.7711],
+            [38.9015, -104.7711],
+            [38.9015, -104.7714]
         ];
         L.polygon(homeBoundary, { color: 'blue' }).addTo(map).bindPopup("Home Property");
 
         // Add circle for 10-minute walking area
-        L.circle([38.8339, -104.8214], {
+        L.circle([38.90161464861117, -104.7712603022105], {
             color: 'green',
             fillColor: '#0f0',
             fillOpacity: 0.5,
@@ -75,6 +75,11 @@
 
         // Layer group for dynamically added markers and lines
         const dynamicLayer = L.layerGroup().addTo(map);
+
+        // Fit map to bounds of all locations
+        const allCoords = locations.map(location => location.coords);
+        const bounds = L.latLngBounds(allCoords);
+        map.fitBounds(bounds);
 
         // Distance calculation and great-circle path
         document.getElementById('distance-form').addEventListener('submit', function (e) {
