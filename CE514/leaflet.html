@@ -4,37 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Map of Colorado Springs</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin="anonymous"/>
+    <!-- Leaflet JavaScript (Ensure placed AFTER Leaflet CSS) -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin="anonymous"></script>
+    <!-- Custom stylesheet -->
     <link rel="stylesheet" href="https://imathews-238.github.io/CE514/style.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha384-o9oR26XtTqj8n9Y2WtLST2zVfxdpPEhXwJ48Q5Qq41aTRV6bXGp91fm2o36GPW23" crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha384-5a4HHyQ7qRfCBYrlInJXrmLD+BGeFmfZrQ9HY2qh9VVj6YTdO+m26jg0h9L5ALbH" crossorigin=""></script>
+
 </head>
 <body>
-    <header>
+
+<header>
         <h1>Interactive Map of Colorado Springs</h1>
         <p>CE 514 | Assignment: Interactive Map | Date: January 23, 2025</p>
-    </header>
+</header>
 
-    <div id="map" style="height: 600px; margin: 20px 0;"></div>
+<main>
+    <p>
+        This page features an interactive Leaflet map to visualize geographic data dynamically. Explore the map below to view spatial details.
+    </p>
 
-    <section>
-        <h2>Calculate Distance</h2>
-        <form id="distanceForm">
-            <label for="point1">Point 1 (Lat, Lng):</label>
-            <input type="text" id="point1" placeholder="e.g., 38.8339, -104.8214" required>
-
-            <label for="point2">Point 2 (Lat, Lng):</label>
-            <input type="text" id="point2" placeholder="e.g., 38.8462, -104.7919" required>
-
-            <button type="submit">Calculate Distance</button>
-        </form>
-        <p id="distanceResult"></p>
-    </section>
-
+    <!-- Map container -->
+    <div id="map"></div>
+    
     <script>
-        const map = L.map('map').setView([38.8339, -104.8214], 13);
+        // Initialize the map and set its view
+        var map = L.map('map').setView([38.8339, -104.8214], 13);
 
-        // Add tile layer
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        // Add a tile layer from OpenStreetMap
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
 
@@ -104,5 +106,23 @@
             document.getElementById('distanceResult').textContent = `Distance: ${distance.toFixed(2)} km`;
         });
     </script>
+</main>
+    <section>
+        <h2>Calculate Distance</h2>
+        <form id="distanceForm">
+            <label for="point1">Point 1 (Lat, Lng):</label>
+            <input type="text" id="point1" placeholder="e.g., 38.8339, -104.8214" required>
+
+            <label for="point2">Point 2 (Lat, Lng):</label>
+            <input type="text" id="point2" placeholder="e.g., 38.8462, -104.7919" required>
+
+            <button type="submit">Calculate Distance</button>
+        </form>
+        <p id="distanceResult"></p>
+    </section>
+<footer>
+    <p>&copy; 2025 Ian Mathews. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
