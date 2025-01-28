@@ -82,12 +82,6 @@ tbody tr:hover {
     margin-bottom: 20px;
 }
 
-img {
-    max-width: 200px;
-    border-radius: 50%;
-    margin: 20px auto;
-    display: block;
-}
 #distance-section {
     padding: 1rem;
 }
