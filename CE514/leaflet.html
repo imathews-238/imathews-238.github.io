@@ -81,6 +81,32 @@
         const bounds = L.latLngBounds(allCoords);
         map.fitBounds(bounds);
 
+        // Function to calculate and draw great circle path
+        function great_circle(lat1, lng1, lat2, lng2) {
+            const toRad = deg => deg * Math.PI / 180;
+            const toDeg = rad => rad * 180 / Math.PI;
+
+            const d = 2 * Math.asin(Math.sqrt(Math.sin((toRad(lat2) - toRad(lat1)) / 2) ** 2 +
+                Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin((toRad(lng2) - toRad(lng1)) / 2) ** 2));
+
+            const num_segments = 100;
+            const points = [];
+
+            for (let i = 0; i <= num_segments; i++) {
+                const f = i / num_segments;
+                const A = Math.sin((1 - f) * d) / Math.sin(d);
+                const B = Math.sin(f * d) / Math.sin(d);
+                const x = A * Math.cos(toRad(lat1)) * Math.cos(toRad(lng1)) + B * Math.cos(toRad(lat2)) * Math.cos(toRad(lng2));
+                const y = A * Math.cos(toRad(lat1)) * Math.sin(toRad(lng1)) + B * Math.cos(toRad(lat2)) * Math.sin(toRad(lng2));
+                const z = A * Math.sin(toRad(lat1)) + B * Math.sin(toRad(lat2));
+                const new_lat = Math.atan2(z, Math.sqrt(x * x + y * y));
+                const new_lng = Math.atan2(y, x);
+                points.push([toDeg(new_lat), toDeg(new_lng)]);
+            }
+
+            L.polyline(points, { color: 'red' }).addTo(dynamicLayer);
+        }
+
         // Distance calculation and great-circle path
         document.getElementById('distance-form').addEventListener('submit', function (e) {
             e.preventDefault();
@@ -111,11 +137,12 @@
 
             document.getElementById('distance-result').textContent = `Distance: ${distance.toFixed(2)} km`;
 
-            // Add markers and line to the map
+            // Add markers to the map
             L.marker(point1).addTo(dynamicLayer).bindPopup("Point 1").openPopup();
             L.marker(point2).addTo(dynamicLayer).bindPopup("Point 2").openPopup();
 
-            L.polyline([point1, point2], { color: 'red' }).addTo(dynamicLayer).bindPopup(`Distance: ${distance.toFixed(2)} km`);
+            // Draw great circle path
+            great_circle(point1[0], point1[1], point2[0], point2[1]);
 
             // Fit map to bounds of the two points with padding for better visibility
             const bounds = L.latLngBounds([point1, point2]);
