@@ -35,11 +35,11 @@ header h2 {
 }
 
 #map {
-            height: 500px; /* Ensures the map is visible */
-            width: 100%;
-            margin: 20px 0;
-            border: 2px solid #ccc; /* Optional styling */
-        }
+    height: 400px;
+    width: 80%;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+}
 main {
     padding: 20px;
     width: 80%;
