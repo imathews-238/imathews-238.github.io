@@ -84,7 +84,14 @@ img {
     margin: 20px auto;
     display: block;
 }
-
+#distance-section {
+    padding: 1rem;
+}
+#distance-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
 
 iframe {
     border: 0;
