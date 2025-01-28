@@ -7,122 +7,115 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
         crossorigin="anonymous"/>
-    <!-- Leaflet JavaScript (Ensure placed AFTER Leaflet CSS) -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
         crossorigin="anonymous"></script>
-    <!-- Custom stylesheet -->
     <link rel="stylesheet" href="https://imathews-238.github.io/CE514/style.css">
-
 </head>
 <body>
-
-<header>
-        <h1>Interactive Map of Colorado Springs</h1>
-        <p>CE 514 | Assignment: Interactive Map | Date: January 23, 2025</p>
-</header>
-
-<main>
-    <p>
-        This page features an interactive Leaflet map to visualize geographic data dynamically. Explore the map below to view spatial details.
-    </p>
-
-    <!-- Map container -->
-    <div id="map"></div>
-    
+    <header>
+        <h1>Interactive Map Project</h1>
+        <p><strong>Name:</strong> Ian</p>
+        <p><strong>Assignment:</strong> Interactive Map of my hometown with Leaflet</p>
+        <p><strong>Class:</strong> Geospatial Software Development</p>
+        <p><strong>Date:</strong> January 27, 2025</p>
+    </header>
+    <main>
+        <div id="map"></div>
+        <section id="distance-section">
+            <h2>Calculate Distance Between Two Points</h2>
+            <form id="distance-form">
+                <label for="point1">Point 1 (Latitude, Longitude):</label>
+                <input type="text" id="point1" placeholder="e.g., 38.8339, -104.8214" required>
+                <label for="point2">Point 2 (Latitude, Longitude):</label>
+                <input type="text" id="point2" placeholder="e.g., 38.8339, -104.8000" required>
+                <button type="submit">Calculate Distance</button>
+            </form>
+            <p id="distance-result"></p>
+        </section>
+    </main>
     <script>
-        // Initialize the map and set its view
-        var map = L.map('map').setView([38.8339, -104.8214], 13);
+        // Initialize the map and set view to Colorado Springs coordinates
+        const map = L.map('map').setView([38.8339, -104.8214], 13);
 
-        // Add a tile layer from OpenStreetMap
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
+        // Add OpenStreetMap tiles
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                }).addTo(map);
 
-        // Add markers
+        // Add point markers with popups for Colorado Springs locations
         const locations = [
-            { coords: [38.8339, -104.8214], name: "My House" },
-            { coords: [38.8462, -104.7919], name: "My School" },
-            { coords: [38.8784, -104.8690], name: "Garden of the Gods Visitor Center" }
+            { name: "My House", coords: [38.8339, -104.8214] },
+            { name: "My School", coords: [38.8462, -104.8007] },
+            { name: "My Church", coords: [38.8283, -104.8401] },
+            { name: "Garden of the Gods", coords: [38.8783, -104.8691] },
+            { name: "Pikes Peak", coords: [38.8409, -105.0423] }
         ];
 
         locations.forEach(location => {
-            L.marker(location.coords).addTo(map).bindPopup(`<b>${location.name}</b>`);
+            L.marker(location.coords).addTo(map).bindPopup(location.name);
         });
 
-        // Add polygon for house boundary
-        const houseBoundary = [
-            [38.8341, -104.8210],
-            [38.8341, -104.8218],
-            [38.8337, -104.8218],
-            [38.8337, -104.8210]
+        // Add polygon for home property boundaries
+        const homeBoundary = [
+            [38.8340, -104.8220],
+            [38.8340, -104.8208],
+            [38.8338, -104.8208],
+            [38.8338, -104.8220]
         ];
-        L.polygon(houseBoundary, { color: 'blue' }).addTo(map).bindPopup("My House Boundary");
+        L.polygon(homeBoundary, { color: 'blue' }).addTo(map).bindPopup("Home Property");
 
-        // Add circle for 10-minute walking radius
+        // Add circle for 10-minute walking area
         L.circle([38.8339, -104.8214], {
-            radius: 800,
             color: 'green',
-            fillColor: '#8FBC8F',
-            fillOpacity: 0.5
-        }).addTo(map).bindPopup("10-minute walking radius");
+            fillColor: '#0f0',
+            fillOpacity: 0.5,
+            radius: 800 // Roughly 10 minutes walking distance
+        }).addTo(map).bindPopup("10-minute Walking Radius");
 
-        // Calculate distance and draw line
-        document.getElementById('distanceForm').addEventListener('submit', function (e) {
+        // Layer group for dynamically added markers and lines
+        const dynamicLayer = L.layerGroup().addTo(map);
+
+        // Distance calculation and great-circle path
+        document.getElementById('distance-form').addEventListener('submit', function (e) {
             e.preventDefault();
 
-            const point1Input = document.getElementById('point1').value.split(',').map(Number);
-            const point2Input = document.getElementById('point2').value.split(',').map(Number);
+            const point1 = document.getElementById('point1').value.split(',').map(Number);
+            const point2 = document.getElementById('point2').value.split(',').map(Number);
 
-            const point1 = L.latLng(point1Input[0], point1Input[1]);
-            const point2 = L.latLng(point2Input[0], point2Input[1]);
+            if (point1.length !== 2 || point2.length !== 2 || isNaN(point1[0]) || isNaN(point1[1]) || isNaN(point2[0]) || isNaN(point2[1])) {
+                alert('Please enter valid coordinates.');
+                return;
+            }
 
-            // Add markers for the entered points
-            L.marker(point1).addTo(map).bindPopup("Point 1").openPopup();
-            L.marker(point2).addTo(map).bindPopup("Point 2").openPopup();
+            // Clear previous markers and lines
+            dynamicLayer.clearLayers();
 
-            // Draw a line between the points
-            L.polyline([point1, point2], { color: 'red' }).addTo(map);
-
-            // Haversine formula to calculate distance
             const R = 6371; // Earth's radius in km
-            const toRadians = deg => deg * (Math.PI / 180);
+            const toRad = deg => deg * Math.PI / 180;
 
-            const lat1 = toRadians(point1.lat);
-            const lon1 = toRadians(point1.lng);
-            const lat2 = toRadians(point2.lat);
-            const lon2 = toRadians(point2.lng);
+            const [lat1, lon1] = point1.map(toRad);
+            const [lat2, lon2] = point2.map(toRad);
 
             const dLat = lat2 - lat1;
             const dLon = lon2 - lon1;
 
-            const a = Math.sin(dLat / 2) ** 2 +
-                      Math.cos(lat1) * Math.cos(lat2) *
-                      Math.sin(dLon / 2) ** 2;
+            const a = Math.sin(dLat / 2) ** 2 + Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLon / 2) ** 2;
             const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
             const distance = R * c;
 
-            document.getElementById('distanceResult').textContent = `Distance: ${distance.toFixed(2)} km`;
+            document.getElementById('distance-result').textContent = `Distance: ${distance.toFixed(2)} km`;
+
+            // Add markers and line to the map
+            L.marker(point1).addTo(dynamicLayer).bindPopup("Point 1").openPopup();
+            L.marker(point2).addTo(dynamicLayer).bindPopup("Point 2").openPopup();
+
+            L.polyline([point1, point2], { color: 'red' }).addTo(dynamicLayer).bindPopup(`Distance: ${distance.toFixed(2)} km`);
+
+            // Fit map to bounds of the two points with padding for better visibility
+            const bounds = L.latLngBounds([point1, point2]);
+            map.fitBounds(bounds, { padding: [100, 100] });
         });
     </script>
-</main>
-    <section>
-        <h2>Calculate Distance</h2>
-        <form id="distanceForm">
-            <label for="point1">Point 1 (Lat, Lng):</label>
-            <input type="text" id="point1" placeholder="e.g., 38.8339, -104.8214" required>
-
-            <label for="point2">Point 2 (Lat, Lng):</label>
-            <input type="text" id="point2" placeholder="e.g., 38.8462, -104.7919" required>
-
-            <button type="submit">Calculate Distance</button>
-        </form>
-        <p id="distanceResult"></p>
-    </section>
-<footer>
-    <p>&copy; 2025 Ian Mathews. All rights reserved.</p>
-</footer>
-
 </body>
 </html>
