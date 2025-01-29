@@ -14,6 +14,26 @@ fetch('https://imathews-238.github.io/CE514/UC_cell_towers.kml') // Ensure this 
         map.fitBounds(track.getBounds());
     });
 
+fetch('https://imathews-238.github.io/CE514/UC_major_roads.kml') // Ensure this KML file is accessible
+    .then(res => res.text())
+    .then(kmltext => {
+        var parser = new DOMParser();
+        var kml = parser.parseFromString(kmltext, 'text/xml');
+        var track = new L.KML(kml);
+        map.addLayer(track);
+        map.fitBounds(track.getBounds());
+    });
+
+fetch('https://imathews-238.github.io/CE514/Utah_county_boundary.kml') // Ensure this KML file is accessible
+    .then(res => res.text())
+    .then(kmltext => {
+        var parser = new DOMParser();
+        var kml = parser.parseFromString(kmltext, 'text/xml');
+        var track = new L.KML(kml);
+        map.addLayer(track);
+        map.fitBounds(track.getBounds());
+    });
+
 const locations = [
     { name: "My House", coords: [38.9011, -104.77125] },
     { name: "William J. Palmer High School", coords: [38.839422463309546, -104.82074570592077] },
