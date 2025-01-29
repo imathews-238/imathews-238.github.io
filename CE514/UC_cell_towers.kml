@@ -1,0 +1,1701 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="utahcountycellulartowers" id="utahcountycellulartowers">
+	<SimpleField name="LICENSEE" type="string"></SimpleField>
+	<SimpleField name="CALLSIGN" type="string"></SimpleField>
+	<SimpleField name="LOCNUM" type="string"></SimpleField>
+	<SimpleField name="LAT_DMS" type="string"></SimpleField>
+	<SimpleField name="LATDIR" type="string"></SimpleField>
+	<SimpleField name="LON_DMS" type="string"></SimpleField>
+	<SimpleField name="LONDIR" type="string"></SimpleField>
+	<SimpleField name="LOCADD" type="string"></SimpleField>
+	<SimpleField name="LOCCITY" type="string"></SimpleField>
+	<SimpleField name="LOCCOUNTY" type="string"></SimpleField>
+	<SimpleField name="LOCSTATE" type="string"></SimpleField>
+	<SimpleField name="NEPA" type="string"></SimpleField>
+	<SimpleField name="QZONE" type="string"></SimpleField>
+	<SimpleField name="TOWREG" type="string"></SimpleField>
+	<SimpleField name="SUPSTRUC" type="float"></SimpleField>
+	<SimpleField name="ALLSTRUC" type="float"></SimpleField>
+	<SimpleField name="STRUCTYPE" type="string"></SimpleField>
+	<SimpleField name="LIC_ID" type="string"></SimpleField>
+</Schema>
+<Folder><name>utahcountycellulartowers</name>
+  <Placemark id="utahcountycellulartowers.1">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">New Cingular Wireless PCS, LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKA704</SimpleData>
+		<SimpleData name="LOCNUM">1</SimpleData>
+		<SimpleData name="LAT_DMS">40,5,26</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">111,49,19</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">7697 SOUTH 7087 WEST</SimpleData>
+		<SimpleData name="LOCCITY">SPANISH FORK</SimpleData>
+		<SimpleData name="LOCCOUNTY">UTAH</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">28.699999999999999</SimpleData>
+		<SimpleData name="ALLSTRUC">32.000000000000000</SimpleData>
+		<SimpleData name="STRUCTYPE">MAST</SimpleData>
+		<SimpleData name="LIC_ID">11830</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.8219,40.0906</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.2">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">New Cingular Wireless PCS, LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKA704</SimpleData>
+		<SimpleData name="LOCNUM">3</SimpleData>
+		<SimpleData name="LAT_DMS">40,1,7</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">111,36,52</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">L7 Sec 20  T9S   R3E  SLBM</SimpleData>
+		<SimpleData name="LOCCITY">SALEM</SimpleData>
+		<SimpleData name="LOCCOUNTY">UTAH</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">1.800000000000000</SimpleData>
+		<SimpleData name="ALLSTRUC">4.600000000000000</SimpleData>
+		<SimpleData name="STRUCTYPE">TANK</SimpleData>
+		<SimpleData name="LIC_ID">11830</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.6144,40.0186</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.3">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">New Cingular Wireless PCS, LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKA704</SimpleData>
+		<SimpleData name="LOCNUM">5</SimpleData>
+		<SimpleData name="LAT_DMS">40,22,6</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">111,35,37</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">8841 N. ALPINE LOOP ROAD</SimpleData>
+		<SimpleData name="LOCCITY">Sundance</SimpleData>
+		<SimpleData name="LOCCOUNTY">UTAH</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">7.300000000000000</SimpleData>
+		<SimpleData name="ALLSTRUC">11.900000000000000</SimpleData>
+		<SimpleData name="STRUCTYPE">POLE</SimpleData>
+		<SimpleData name="LIC_ID">11830</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.5936,40.3683</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.4">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">New Cingular Wireless PCS, LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKA704</SimpleData>
+		<SimpleData name="LOCNUM">6</SimpleData>
+		<SimpleData name="LAT_DMS">40,34,1</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">112,3,19</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">6924 WEST 10200 SOUTH</SimpleData>
+		<SimpleData name="LOCCITY">WEST JORDAN</SimpleData>
+		<SimpleData name="LOCCOUNTY">SALT LAKE</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">23.500000000000000</SimpleData>
+		<SimpleData name="ALLSTRUC">24.399999999999999</SimpleData>
+		<SimpleData name="STRUCTYPE">POLE</SimpleData>
+		<SimpleData name="LIC_ID">11830</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-112.0553,40.5669</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.5">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">New Cingular Wireless PCS, LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKA704</SimpleData>
+		<SimpleData name="LOCNUM">7</SimpleData>
+		<SimpleData name="LAT_DMS">40,37,22</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">111,34,6</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">SW1/4 S26 T2S R3E - GUARDSMAN PASS ROAD</SimpleData>
+		<SimpleData name="LOCCITY">BRIGHTON</SimpleData>
+		<SimpleData name="LOCCOUNTY">SALT LAKE</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">5.500000000000000</SimpleData>
+		<SimpleData name="ALLSTRUC">7.000000000000000</SimpleData>
+		<SimpleData name="STRUCTYPE">B</SimpleData>
+		<SimpleData name="LIC_ID">11830</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.5683,40.6228</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.6">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">New Cingular Wireless PCS, LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKA704</SimpleData>
+		<SimpleData name="LOCNUM">8</SimpleData>
+		<SimpleData name="LAT_DMS">40,18,17</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">112,3,41</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">3692 North 975 West</SimpleData>
+		<SimpleData name="LOCCITY">EAGLE MOUNTAIN</SimpleData>
+		<SimpleData name="LOCCOUNTY">UTAH</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="TOWREG">1232389</SimpleData>
+		<SimpleData name="SUPSTRUC">45.399999999999999</SimpleData>
+		<SimpleData name="ALLSTRUC">50.600000000000001</SimpleData>
+		<SimpleData name="STRUCTYPE">POLE</SimpleData>
+		<SimpleData name="LIC_ID">11830</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-112.0614,40.3047</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.7">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">Verizon Wireless (VAW) LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKA728</SimpleData>
+		<SimpleData name="LOCNUM">1</SimpleData>
+		<SimpleData name="LAT_DMS">40,14,52</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">111,37,33</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">1150 NORTH 1750 EAST</SimpleData>
+		<SimpleData name="LOCCITY">PROVO</SimpleData>
+		<SimpleData name="LOCCOUNTY">UTAH</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="ALLSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="LIC_ID">12110</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.6258,40.2478</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.8">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">Verizon Wireless (VAW) LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKA728</SimpleData>
+		<SimpleData name="LOCNUM">2</SimpleData>
+		<SimpleData name="LAT_DMS">40,5,21</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">111,49,19</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">5 MILES WEST OF BENJAMIN, ATOP WEST MOUNTAIN</SimpleData>
+		<SimpleData name="LOCCITY">BENJAMIN</SimpleData>
+		<SimpleData name="LOCCOUNTY">UTAH</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">31.100000000000001</SimpleData>
+		<SimpleData name="ALLSTRUC">32.299999999999997</SimpleData>
+		<SimpleData name="STRUCTYPE">MAST</SimpleData>
+		<SimpleData name="LIC_ID">12110</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.8219,40.0892</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.9">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">Verizon Wireless (VAW) LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKA728</SimpleData>
+		<SimpleData name="LOCNUM">3</SimpleData>
+		<SimpleData name="LAT_DMS">40,26,58</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">111,54,50</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">3.52 Miles SE of Riverton</SimpleData>
+		<SimpleData name="LOCCITY">Riverton</SimpleData>
+		<SimpleData name="LOCCOUNTY">UTAH</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="ALLSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="LIC_ID">12110</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.9139,40.4494</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.10">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">Verizon Wireless (VAW) LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKA728</SimpleData>
+		<SimpleData name="LOCNUM">4</SimpleData>
+		<SimpleData name="LAT_DMS">40,21,3</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">111,46,34</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">Timpanogas Stake, S of 7255 N. 4650 West</SimpleData>
+		<SimpleData name="LOCCITY">AMERICAN FORK</SimpleData>
+		<SimpleData name="LOCCOUNTY">UTAH</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="ALLSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="LIC_ID">12110</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.7761,40.3508</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.11">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">Verizon Wireless (VAW) LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKA728</SimpleData>
+		<SimpleData name="LOCNUM">5</SimpleData>
+		<SimpleData name="LAT_DMS">40,25,22</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">111,45,29</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">10505 NORTH 4323 WEST</SimpleData>
+		<SimpleData name="LOCCITY">AMERICAN FORK</SimpleData>
+		<SimpleData name="LOCCOUNTY">UTAH</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="ALLSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="LIC_ID">12110</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.7581,40.4228</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.12">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">Verizon Wireless (VAW) LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKA728</SimpleData>
+		<SimpleData name="LOCNUM">6</SimpleData>
+		<SimpleData name="LAT_DMS">39,57,23</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">111,18,22</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">0.95 miles W and 1.24 miles N of the top of Davis Hill</SimpleData>
+		<SimpleData name="LOCCITY">Mapleton</SimpleData>
+		<SimpleData name="LOCCOUNTY">UTAH</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="ALLSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="LIC_ID">12110</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.3061,39.9564</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.13">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">Verizon Wireless (VAW) LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKA728</SimpleData>
+		<SimpleData name="LOCNUM">7</SimpleData>
+		<SimpleData name="LAT_DMS">40,18,17</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">112,3,45</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">4000 North Eagle Mountain</SimpleData>
+		<SimpleData name="LOCCITY">Eagle Mountain</SimpleData>
+		<SimpleData name="LOCCOUNTY">UTAH</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">24.399999999999999</SimpleData>
+		<SimpleData name="ALLSTRUC">27.399999999999999</SimpleData>
+		<SimpleData name="STRUCTYPE">POLE</SimpleData>
+		<SimpleData name="LIC_ID">12110</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-112.0625,40.3047</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.14">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">Verizon Wireless (VAW) LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKA259</SimpleData>
+		<SimpleData name="LOCNUM">1</SimpleData>
+		<SimpleData name="LAT_DMS">40,46,20</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">112,0,16</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">4745 Wiley Post Way</SimpleData>
+		<SimpleData name="LOCCITY">Salt Lake City</SimpleData>
+		<SimpleData name="LOCCOUNTY">SALT LAKE</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="ALLSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="LIC_ID">12193</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-112.0044,40.7722</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.15">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">Verizon Wireless (VAW) LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKA259</SimpleData>
+		<SimpleData name="LOCNUM">2</SimpleData>
+		<SimpleData name="LAT_DMS">40,32,16</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">111,58,47</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">11730 SOUTH 3800TH WEST</SimpleData>
+		<SimpleData name="LOCCITY">SOUTH JORDAN</SimpleData>
+		<SimpleData name="LOCCOUNTY">SALT LAKE</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="ALLSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="LIC_ID">12193</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.9797,40.5378</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.16">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">Verizon Wireless (VAW) LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKA259</SimpleData>
+		<SimpleData name="LOCNUM">3</SimpleData>
+		<SimpleData name="LAT_DMS">40,39,12</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">111,59,27</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">5393 SOUTH 4220 WEST</SimpleData>
+		<SimpleData name="LOCCITY">KEARNS</SimpleData>
+		<SimpleData name="LOCCOUNTY">SALT LAKE</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="ALLSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="LIC_ID">12193</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.9908,40.6533</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.17">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">Verizon Wireless (VAW) LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKA259</SimpleData>
+		<SimpleData name="LOCNUM">4</SimpleData>
+		<SimpleData name="LAT_DMS">40,52,23</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">111,53,29</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">1625 South 500 West</SimpleData>
+		<SimpleData name="LOCCITY">Woods Cross</SimpleData>
+		<SimpleData name="LOCCOUNTY">DAVIS</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="ALLSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="LIC_ID">12193</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.8914,40.8731</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.18">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">Verizon Wireless (VAW) LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKA259</SimpleData>
+		<SimpleData name="LOCNUM">6</SimpleData>
+		<SimpleData name="LAT_DMS">40,35,50</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">111,50,26</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">1750 East 8600 South</SimpleData>
+		<SimpleData name="LOCCITY">Salt Lake</SimpleData>
+		<SimpleData name="LOCCOUNTY">SALT LAKE</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="ALLSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="LIC_ID">12193</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.8406,40.5972</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.19">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">Verizon Wireless (VAW) LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKA259</SimpleData>
+		<SimpleData name="LOCNUM">8</SimpleData>
+		<SimpleData name="LAT_DMS">40,40,55</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">112,12,11</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">4440 South 13000 West</SimpleData>
+		<SimpleData name="LOCCITY">Tooele</SimpleData>
+		<SimpleData name="LOCCOUNTY">TOOELE</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">21.300000000000001</SimpleData>
+		<SimpleData name="ALLSTRUC">21.300000000000001</SimpleData>
+		<SimpleData name="STRUCTYPE">NNTANN</SimpleData>
+		<SimpleData name="LIC_ID">12193</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-112.2031,40.682</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.20">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">Verizon Wireless (VAW) LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKA259</SimpleData>
+		<SimpleData name="LOCNUM">10</SimpleData>
+		<SimpleData name="LAT_DMS">40,58,33</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">111,53,47</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">426 WEST, 250 SOUTH</SimpleData>
+		<SimpleData name="LOCCITY">FARMINGTON</SimpleData>
+		<SimpleData name="LOCCOUNTY">DAVIS</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="ALLSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="LIC_ID">12193</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.8964,40.9758</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.21">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">Verizon Wireless (VAW) LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKA259</SimpleData>
+		<SimpleData name="LOCNUM">12</SimpleData>
+		<SimpleData name="LAT_DMS">40,45,32</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">111,37,23</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">520 SOUTH 10870 EAST</SimpleData>
+		<SimpleData name="LOCCITY">KIMBALL JUNCTION</SimpleData>
+		<SimpleData name="LOCCOUNTY">SALT LAKE</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="ALLSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="LIC_ID">12193</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.6231,40.7589</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.22">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">Verizon Wireless (VAW) LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKA259</SimpleData>
+		<SimpleData name="LOCNUM">13</SimpleData>
+		<SimpleData name="LAT_DMS">40,37,53</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">111,51,56</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">910 EAST 6600 SOUTH STREET</SimpleData>
+		<SimpleData name="LOCCITY">MURRAY</SimpleData>
+		<SimpleData name="LOCCOUNTY">SALT LAKE</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="ALLSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="LIC_ID">12193</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.8656,40.6314</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.23">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">Verizon Wireless (VAW) LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKA259</SimpleData>
+		<SimpleData name="LOCNUM">14</SimpleData>
+		<SimpleData name="LAT_DMS">40,44,32</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">112,10,47</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">NEAR THE AIR MONITORING STATION, INTERSECTION OF I-80 AND HIGHWAY 202</SimpleData>
+		<SimpleData name="LOCCITY">SALTAIR</SimpleData>
+		<SimpleData name="LOCCOUNTY">SALT LAKE</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="ALLSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="LIC_ID">12193</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-112.1797,40.7422</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.24">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">Verizon Wireless (VAW) LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKA259</SimpleData>
+		<SimpleData name="LOCNUM">16</SimpleData>
+		<SimpleData name="LAT_DMS">40,34,56</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">111,39,13</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">THE CLIFF LODGE, SNOWBIRD SKI RESORT</SimpleData>
+		<SimpleData name="LOCCITY">SALT LAKE</SimpleData>
+		<SimpleData name="LOCCOUNTY">SALT LAKE</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="ALLSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="LIC_ID">12193</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.6536,40.5822</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.25">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">Verizon Wireless (VAW) LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKA259</SimpleData>
+		<SimpleData name="LOCNUM">17</SimpleData>
+		<SimpleData name="LAT_DMS">40,35,46</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">111,58,18</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">3232 W. 8600 S. Street</SimpleData>
+		<SimpleData name="LOCCITY">West Jordan</SimpleData>
+		<SimpleData name="LOCCOUNTY">SALT LAKE</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="ALLSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="LIC_ID">12193</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.9717,40.5961</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.26">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">Verizon Wireless (VAW) LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKA259</SimpleData>
+		<SimpleData name="LOCNUM">18</SimpleData>
+		<SimpleData name="LAT_DMS">40,45,31</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">111,52,21</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">675 E. 500 S.</SimpleData>
+		<SimpleData name="LOCCITY">SALT LAKE</SimpleData>
+		<SimpleData name="LOCCOUNTY">SALT LAKE</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="ALLSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="LIC_ID">12193</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.8725,40.7586</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.27">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">Verizon Wireless (VAW) LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKA259</SimpleData>
+		<SimpleData name="LOCNUM">19</SimpleData>
+		<SimpleData name="LAT_DMS">40,34,36</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">111,53,22</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">9555 South State Street</SimpleData>
+		<SimpleData name="LOCCITY">Sandy</SimpleData>
+		<SimpleData name="LOCCOUNTY">SALT LAKE</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="ALLSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="LIC_ID">12193</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.8894,40.5767</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.28">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">Verizon Wireless (VAW) LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKA259</SimpleData>
+		<SimpleData name="LOCNUM">20</SimpleData>
+		<SimpleData name="LAT_DMS">40,38,46</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">112,3,48</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">5701 South Utah Highway 111</SimpleData>
+		<SimpleData name="LOCCITY">Kearns</SimpleData>
+		<SimpleData name="LOCCOUNTY">SALT LAKE</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="ALLSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="LIC_ID">12193</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-112.0633,40.6461</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.29">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">Verizon Wireless (VAW) LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKA259</SimpleData>
+		<SimpleData name="LOCNUM">21</SimpleData>
+		<SimpleData name="LAT_DMS">40,32,20</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">111,49,48</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">2094 East Elderberry Way</SimpleData>
+		<SimpleData name="LOCCITY">Sandy</SimpleData>
+		<SimpleData name="LOCCOUNTY">SALT LAKE</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="ALLSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="LIC_ID">12193</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.83,40.5389</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.30">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">Verizon Wireless (VAW) LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKA259</SimpleData>
+		<SimpleData name="LOCNUM">23</SimpleData>
+		<SimpleData name="LAT_DMS">40,45,41</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">111,46,17</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">4502 E. WINDHAM CT.</SimpleData>
+		<SimpleData name="LOCCITY">SALT LAKE</SimpleData>
+		<SimpleData name="LOCCOUNTY">SALT LAKE</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">15.199999999999999</SimpleData>
+		<SimpleData name="ALLSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="LIC_ID">12193</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.7714,40.7614</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.31">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">Verizon Wireless (VAW) LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKA259</SimpleData>
+		<SimpleData name="LOCNUM">25</SimpleData>
+		<SimpleData name="LAT_DMS">40,27,34</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">112,24,37</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">ATOP SOUTH MOUNTAIN</SimpleData>
+		<SimpleData name="LOCCITY">TOOELE</SimpleData>
+		<SimpleData name="LOCCOUNTY">TOOELE</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">53.299999999999997</SimpleData>
+		<SimpleData name="ALLSTRUC">54.799999999999997</SimpleData>
+		<SimpleData name="STRUCTYPE">TOWER</SimpleData>
+		<SimpleData name="LIC_ID">12193</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-112.4103,40.4594</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.32">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">Verizon Wireless (VAW) LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKA259</SimpleData>
+		<SimpleData name="LOCNUM">27</SimpleData>
+		<SimpleData name="LAT_DMS">40,15,14</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">112,42,6</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">Stark Road - 1.9 mi NE of Skull Valley Rd</SimpleData>
+		<SimpleData name="LOCCITY">Dugway</SimpleData>
+		<SimpleData name="LOCCOUNTY">TOOELE</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">59.399999999999999</SimpleData>
+		<SimpleData name="ALLSTRUC">59.399999999999999</SimpleData>
+		<SimpleData name="STRUCTYPE">MAST</SimpleData>
+		<SimpleData name="LIC_ID">12193</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-112.7017,40.2539</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.33">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">Verizon Wireless (VAW) LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKA259</SimpleData>
+		<SimpleData name="LOCNUM">28</SimpleData>
+		<SimpleData name="LAT_DMS">40,49,49</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">111,53,28</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">Eaglewood Loop West</SimpleData>
+		<SimpleData name="LOCCITY">North Salt Lake</SimpleData>
+		<SimpleData name="LOCCOUNTY">DAVIS</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">12.300000000000001</SimpleData>
+		<SimpleData name="ALLSTRUC">12.300000000000001</SimpleData>
+		<SimpleData name="STRUCTYPE">B</SimpleData>
+		<SimpleData name="LIC_ID">12193</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.8911,40.8303</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.34">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">NEW CINGULAR WIRELESS PCS, LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKQ313</SimpleData>
+		<SimpleData name="LOCNUM">3</SimpleData>
+		<SimpleData name="LAT_DMS">40,51,19</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">111,28,50</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">Lewis Peak - 5.6 miles south of Coalville</SimpleData>
+		<SimpleData name="LOCCITY">COALVILLE</SimpleData>
+		<SimpleData name="LOCCOUNTY">SUMMIT</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">60.700000000000003</SimpleData>
+		<SimpleData name="ALLSTRUC">61.000000000000000</SimpleData>
+		<SimpleData name="STRUCTYPE">MAST</SimpleData>
+		<SimpleData name="LIC_ID">12233</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.4806,40.8553</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.35">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">NEW CINGULAR WIRELESS PCS, LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKQ313</SimpleData>
+		<SimpleData name="LOCNUM">6</SimpleData>
+		<SimpleData name="LAT_DMS">40,12,31</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">111,3,30</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">2511 SOUTH SOLDIER CREEK TRAIL</SimpleData>
+		<SimpleData name="LOCCITY">HEBER CITY</SimpleData>
+		<SimpleData name="LOCCOUNTY">WASATCH</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">33.500000000000000</SimpleData>
+		<SimpleData name="ALLSTRUC">33.500000000000000</SimpleData>
+		<SimpleData name="STRUCTYPE">POLE</SimpleData>
+		<SimpleData name="LIC_ID">12233</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.0583,40.2086</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.36">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">NEW CINGULAR WIRELESS PCS, LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKQ313</SimpleData>
+		<SimpleData name="LOCNUM">8</SimpleData>
+		<SimpleData name="LAT_DMS">40,22,6</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">111,35,37</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">8841 N. ALPINE LOOP ROAD</SimpleData>
+		<SimpleData name="LOCCITY">Sundance</SimpleData>
+		<SimpleData name="LOCCOUNTY">UTAH</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">7.300000000000000</SimpleData>
+		<SimpleData name="ALLSTRUC">11.900000000000000</SimpleData>
+		<SimpleData name="STRUCTYPE">POLE</SimpleData>
+		<SimpleData name="LIC_ID">12233</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.5936,40.3683</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.37">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">NEW CINGULAR WIRELESS PCS, LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKQ313</SimpleData>
+		<SimpleData name="LOCNUM">9</SimpleData>
+		<SimpleData name="LAT_DMS">40,24,19</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">111,28,34</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">2999 West Canyon Road</SimpleData>
+		<SimpleData name="LOCCITY">Wallsburg</SimpleData>
+		<SimpleData name="LOCCOUNTY">WASATCH</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">21.899999999999999</SimpleData>
+		<SimpleData name="ALLSTRUC">21.899999999999999</SimpleData>
+		<SimpleData name="STRUCTYPE">MAST</SimpleData>
+		<SimpleData name="LIC_ID">12233</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.4761,40.4053</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.38">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">NEW CINGULAR WIRELESS PCS, LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKQ313</SimpleData>
+		<SimpleData name="LOCNUM">10</SimpleData>
+		<SimpleData name="LAT_DMS">40,45,33</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">111,37,22</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">SW 1/4 S4 T1S R3E SLM (Parleys Summit)</SimpleData>
+		<SimpleData name="LOCCITY">PARK CITY</SimpleData>
+		<SimpleData name="LOCCOUNTY">SUMMIT</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">18.899999999999999</SimpleData>
+		<SimpleData name="ALLSTRUC">20.699999999999999</SimpleData>
+		<SimpleData name="STRUCTYPE">POLE</SimpleData>
+		<SimpleData name="LIC_ID">12233</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.6228,40.7592</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.39">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">NEW CINGULAR WIRELESS PCS, LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKQ313</SimpleData>
+		<SimpleData name="LOCNUM">11</SimpleData>
+		<SimpleData name="LAT_DMS">40,37,7</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">111,29,24</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">2 STEINS WAY</SimpleData>
+		<SimpleData name="LOCCITY">PARK CITY</SimpleData>
+		<SimpleData name="LOCCOUNTY">SUMMIT</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">12.500000000000000</SimpleData>
+		<SimpleData name="ALLSTRUC">12.500000000000000</SimpleData>
+		<SimpleData name="STRUCTYPE">B</SimpleData>
+		<SimpleData name="LIC_ID">12233</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.49,40.6186</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.40">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">NEW CINGULAR WIRELESS PCS, LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKA376</SimpleData>
+		<SimpleData name="LOCNUM">6</SimpleData>
+		<SimpleData name="LAT_DMS">40,50,47</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">112,48,1</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">10 Miles N of I-80 at Exit 70</SimpleData>
+		<SimpleData name="LOCCITY">Delle</SimpleData>
+		<SimpleData name="LOCCOUNTY">TOOELE</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">18.600000000000001</SimpleData>
+		<SimpleData name="ALLSTRUC">26.199999999999999</SimpleData>
+		<SimpleData name="STRUCTYPE">MAST</SimpleData>
+		<SimpleData name="LIC_ID">12250</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-112.8003,40.8464</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.41">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">NEW CINGULAR WIRELESS PCS, LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKA376</SimpleData>
+		<SimpleData name="LOCNUM">24</SimpleData>
+		<SimpleData name="LAT_DMS">40,27,11</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">111,56,36</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">16500 SOUTH 2200 WEST</SimpleData>
+		<SimpleData name="LOCCITY">BLUFFDALE</SimpleData>
+		<SimpleData name="LOCCOUNTY">SALT LAKE</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">48.200000000000003</SimpleData>
+		<SimpleData name="ALLSTRUC">49.100000000000001</SimpleData>
+		<SimpleData name="STRUCTYPE">POLE</SimpleData>
+		<SimpleData name="LIC_ID">12250</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.9433,40.4531</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.42">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">NEW CINGULAR WIRELESS PCS, LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKA376</SimpleData>
+		<SimpleData name="LOCNUM">25</SimpleData>
+		<SimpleData name="LAT_DMS">40,30,43</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">111,50,40</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">1661 EAST 13200 SOUTH</SimpleData>
+		<SimpleData name="LOCCITY">DRAPER</SimpleData>
+		<SimpleData name="LOCCOUNTY">SALT LAKE</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">30.500000000000000</SimpleData>
+		<SimpleData name="ALLSTRUC">31.399999999999999</SimpleData>
+		<SimpleData name="STRUCTYPE">POLE</SimpleData>
+		<SimpleData name="LIC_ID">12250</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.8444,40.5119</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.43">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">NEW CINGULAR WIRELESS PCS, LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKA376</SimpleData>
+		<SimpleData name="LOCNUM">26</SimpleData>
+		<SimpleData name="LAT_DMS">40,34,1</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">112,3,19</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">6924 WEST 10200 SOUTH</SimpleData>
+		<SimpleData name="LOCCITY">WEST JORDAN</SimpleData>
+		<SimpleData name="LOCCOUNTY">SALT LAKE</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">23.500000000000000</SimpleData>
+		<SimpleData name="ALLSTRUC">24.399999999999999</SimpleData>
+		<SimpleData name="STRUCTYPE">POLE</SimpleData>
+		<SimpleData name="LIC_ID">12250</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-112.0553,40.5669</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.44">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">NEW CINGULAR WIRELESS PCS, LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKA376</SimpleData>
+		<SimpleData name="LOCNUM">27</SimpleData>
+		<SimpleData name="LAT_DMS">40,37,22</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">111,34,6</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">SW1/4 S26 T2S R3E - GUARDSMAN PASS ROAD</SimpleData>
+		<SimpleData name="LOCCITY">BRIGHTON</SimpleData>
+		<SimpleData name="LOCCOUNTY">SALT LAKE</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">5.500000000000000</SimpleData>
+		<SimpleData name="ALLSTRUC">7.000000000000000</SimpleData>
+		<SimpleData name="STRUCTYPE">B</SimpleData>
+		<SimpleData name="LIC_ID">12250</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.5683,40.6228</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.45">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">NEW CINGULAR WIRELESS PCS, LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKA376</SimpleData>
+		<SimpleData name="LOCNUM">28</SimpleData>
+		<SimpleData name="LAT_DMS">40,32,40</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">111,50,30</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">11400 SOUTH 1700 EAST</SimpleData>
+		<SimpleData name="LOCCITY">SANDY</SimpleData>
+		<SimpleData name="LOCCOUNTY">SALT LAKE</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">32.899999999999999</SimpleData>
+		<SimpleData name="ALLSTRUC">32.899999999999999</SimpleData>
+		<SimpleData name="STRUCTYPE">POLE</SimpleData>
+		<SimpleData name="LIC_ID">12250</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.8417,40.5445</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.46">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">NEW CINGULAR WIRELESS PCS, LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKA376</SimpleData>
+		<SimpleData name="LOCNUM">29</SimpleData>
+		<SimpleData name="LAT_DMS">40,55,34</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">111,53,43</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">1151 West 850 North</SimpleData>
+		<SimpleData name="LOCCITY">CENTERVILLE</SimpleData>
+		<SimpleData name="LOCCOUNTY">DAVIS</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">37.200000000000003</SimpleData>
+		<SimpleData name="ALLSTRUC">38.399999999999999</SimpleData>
+		<SimpleData name="STRUCTYPE">POLE</SimpleData>
+		<SimpleData name="LIC_ID">12250</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.8953,40.9261</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.47">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">NEW CINGULAR WIRELESS PCS, LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKA376</SimpleData>
+		<SimpleData name="LOCNUM">30</SimpleData>
+		<SimpleData name="LAT_DMS">40,5,26</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">111,49,19</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">7697 SOUTH 7087 WEST</SimpleData>
+		<SimpleData name="LOCCITY">SPANISH FORK</SimpleData>
+		<SimpleData name="LOCCOUNTY">UTAH</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">28.699999999999999</SimpleData>
+		<SimpleData name="ALLSTRUC">32.000000000000000</SimpleData>
+		<SimpleData name="STRUCTYPE">MAST</SimpleData>
+		<SimpleData name="LIC_ID">12250</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.8219,40.0906</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.48">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">NEW CINGULAR WIRELESS PCS, LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKA376</SimpleData>
+		<SimpleData name="LOCNUM">31</SimpleData>
+		<SimpleData name="LAT_DMS">40,27,35</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">112,24,33</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">3 MILES WEST OF STOCKTON HWY 36</SimpleData>
+		<SimpleData name="LOCCITY">STOCKTON</SimpleData>
+		<SimpleData name="LOCCOUNTY">TOOELE</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">46.299999999999997</SimpleData>
+		<SimpleData name="ALLSTRUC">49.700000000000003</SimpleData>
+		<SimpleData name="STRUCTYPE">MAST</SimpleData>
+		<SimpleData name="LIC_ID">12250</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-112.4092,40.4597</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.49">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">NEW CINGULAR WIRELESS PCS, LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKA376</SimpleData>
+		<SimpleData name="LOCNUM">34</SimpleData>
+		<SimpleData name="LAT_DMS">40,13,17</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">112,44,34</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">US ARMY DUGWAY PROVING GROUNDS</SimpleData>
+		<SimpleData name="LOCCITY">DUGWAY</SimpleData>
+		<SimpleData name="LOCCOUNTY">TOOELE</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">14.300000000000001</SimpleData>
+		<SimpleData name="ALLSTRUC">17.399999999999999</SimpleData>
+		<SimpleData name="STRUCTYPE">MAST</SimpleData>
+		<SimpleData name="LIC_ID">12250</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-112.7428,40.2214</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.50">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">NEW CINGULAR WIRELESS PCS, LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKA376</SimpleData>
+		<SimpleData name="LOCNUM">37</SimpleData>
+		<SimpleData name="LAT_DMS">40,46,23</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">111,43,15</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">6410 EMMIGRATION CANYON ROAD</SimpleData>
+		<SimpleData name="LOCCITY">SALT LAKE CITY</SimpleData>
+		<SimpleData name="LOCCOUNTY">SALT LAKE</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">13.400000000000000</SimpleData>
+		<SimpleData name="ALLSTRUC">16.500000000000000</SimpleData>
+		<SimpleData name="STRUCTYPE">POLE</SimpleData>
+		<SimpleData name="LIC_ID">12250</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.7208,40.7731</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.51">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">Uintah Basin Electronic Telecommunications d/b/a Strata Networks</SimpleData>
+		<SimpleData name="CALLSIGN">KNKN236</SimpleData>
+		<SimpleData name="LOCNUM">3</SimpleData>
+		<SimpleData name="LAT_DMS">40,15,17</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">110,35,19</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">BLACKTAIL RIDGE CELL SITE- 121.9 METERS N OF BLACKTAIL RIDGE</SimpleData>
+		<SimpleData name="LOCCITY">BLACKTAIL RIDGE</SimpleData>
+		<SimpleData name="LOCCOUNTY">DUCHESNE</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">61.000000000000000</SimpleData>
+		<SimpleData name="ALLSTRUC">61.000000000000000</SimpleData>
+		<SimpleData name="STRUCTYPE">TOWER</SimpleData>
+		<SimpleData name="LIC_ID">12403</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-110.5886,40.2547</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.52">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">Uintah Basin Electronic Telecommunications d/b/a Strata Networks</SimpleData>
+		<SimpleData name="CALLSIGN">KNKN236</SimpleData>
+		<SimpleData name="LOCNUM">6</SimpleData>
+		<SimpleData name="LAT_DMS">40,21,17</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">110,47,57</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">TABBY MOUNTAIN ON TOP OF TABBY MOUNTAIN</SimpleData>
+		<SimpleData name="LOCCITY">TABBY MOUNTAIN</SimpleData>
+		<SimpleData name="LOCCOUNTY">DUCHESNE</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">41.700000000000003</SimpleData>
+		<SimpleData name="ALLSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="LIC_ID">12403</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-110.7992,40.3547</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.53">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">Uintah Basin Electronic Telecommunications d/b/a Strata Networks</SimpleData>
+		<SimpleData name="CALLSIGN">KNKN236</SimpleData>
+		<SimpleData name="LOCNUM">9</SimpleData>
+		<SimpleData name="LAT_DMS">40,21,13</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">110,42,25</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">.93 KM SOUTH OF</SimpleData>
+		<SimpleData name="LOCCITY">TABIONA</SimpleData>
+		<SimpleData name="LOCCOUNTY">DUCHESNE</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">21.300000000000001</SimpleData>
+		<SimpleData name="ALLSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="LIC_ID">12403</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-110.7069,40.3536</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.54">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">Uintah Basin Electronic Telecommunications d/b/a Strata Networks</SimpleData>
+		<SimpleData name="CALLSIGN">KNKN236</SimpleData>
+		<SimpleData name="LOCNUM">11</SimpleData>
+		<SimpleData name="LAT_DMS">40,25,46</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">110,15,47</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">CHIDESTER SPRINGS: 8.9 KM NORTH OF</SimpleData>
+		<SimpleData name="LOCCITY">ALTAMONT</SimpleData>
+		<SimpleData name="LOCCOUNTY">DUCHESNE</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">64.599999999999994</SimpleData>
+		<SimpleData name="ALLSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="LIC_ID">12403</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-110.2631,40.4294</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.55">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">Uintah Basin Electronic Telecommunications d/b/a Strata Networks</SimpleData>
+		<SimpleData name="CALLSIGN">KNKN236</SimpleData>
+		<SimpleData name="LOCNUM">14</SimpleData>
+		<SimpleData name="LAT_DMS">40,25,46</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">110,15,47</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">CHIDESTER SPRINGS: 8.9 KM NORTH OF</SimpleData>
+		<SimpleData name="LOCCITY">ALTAMONT</SimpleData>
+		<SimpleData name="LOCCOUNTY">DUCHESNE</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">64.599999999999994</SimpleData>
+		<SimpleData name="ALLSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="LIC_ID">12403</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-110.2631,40.4294</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.56">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">Uintah Basin Electronic Telecommunications d/b/a Strata Networks</SimpleData>
+		<SimpleData name="CALLSIGN">KNKN236</SimpleData>
+		<SimpleData name="LOCNUM">15</SimpleData>
+		<SimpleData name="LAT_DMS">40,9,59</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">110,23,34</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">2.3 KM SOUTH OF DUCHESNE AIRPORT</SimpleData>
+		<SimpleData name="LOCCITY">DUCHESNE</SimpleData>
+		<SimpleData name="LOCCOUNTY">DUCHESNE</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">33.500000000000000</SimpleData>
+		<SimpleData name="ALLSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="LIC_ID">12403</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-110.3928,40.1664</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.57">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">Uintah Basin Electronic Telecommunications d/b/a Strata Networks</SimpleData>
+		<SimpleData name="CALLSIGN">KNKN236</SimpleData>
+		<SimpleData name="LOCNUM">17</SimpleData>
+		<SimpleData name="LAT_DMS">39,53,6</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">110,44,40</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">INDIAN CANYON CELL SITE: 0.3 KM N OF ISEPASCO DE ENCINA RD &amp; 0.3 KM E</SimpleData>
+		<SimpleData name="LOCCITY">DUCHESNE</SimpleData>
+		<SimpleData name="LOCCOUNTY">DUCHESNE</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">18.300000000000001</SimpleData>
+		<SimpleData name="ALLSTRUC">22.800000000000001</SimpleData>
+		<SimpleData name="STRUCTYPE">POLE</SimpleData>
+		<SimpleData name="LIC_ID">12403</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-110.7444,39.885</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.58">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">Uintah Basin Electronic Telecommunications d/b/a Strata Networks</SimpleData>
+		<SimpleData name="CALLSIGN">KNKN236</SimpleData>
+		<SimpleData name="LOCNUM">21</SimpleData>
+		<SimpleData name="LAT_DMS">40,9,49</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">110,43,34</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">Cedar Rim Mountain Cell Site, near the top of Cedar Mountain, 17 miles</SimpleData>
+		<SimpleData name="LOCCITY">Duchesne</SimpleData>
+		<SimpleData name="LOCCOUNTY">DUCHESNE</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">48.799999999999997</SimpleData>
+		<SimpleData name="ALLSTRUC">53.299999999999997</SimpleData>
+		<SimpleData name="STRUCTYPE">NNTANN</SimpleData>
+		<SimpleData name="LIC_ID">12403</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-110.7261,40.1636</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.59">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">New Cingular Wireless PCS, LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKN218</SimpleData>
+		<SimpleData name="LOCNUM">19</SimpleData>
+		<SimpleData name="LAT_DMS">40,21,49</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">110,46,34</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">41596 North 21000 West</SimpleData>
+		<SimpleData name="LOCCITY">Kearns</SimpleData>
+		<SimpleData name="LOCCOUNTY">DUCHESNE</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">15.199999999999999</SimpleData>
+		<SimpleData name="ALLSTRUC">15.500000000000000</SimpleData>
+		<SimpleData name="STRUCTYPE">TOWER</SimpleData>
+		<SimpleData name="LIC_ID">12492</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-110.7761,40.3636</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.60">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">New Cingular Wireless PCS, LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKN218</SimpleData>
+		<SimpleData name="LOCNUM">20</SimpleData>
+		<SimpleData name="LAT_DMS">39,38,34</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">110,20,48</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">NE 1/4 NE 1/4 S 4, T 13 S, R 14 E</SimpleData>
+		<SimpleData name="LOCCITY">Sunnyside</SimpleData>
+		<SimpleData name="LOCCOUNTY">CARBON</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">36.899999999999999</SimpleData>
+		<SimpleData name="ALLSTRUC">40.700000000000003</SimpleData>
+		<SimpleData name="STRUCTYPE">MAST</SimpleData>
+		<SimpleData name="LIC_ID">12492</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-110.3467,39.6428</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.61">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">New Cingular Wireless PCS, LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKN218</SimpleData>
+		<SimpleData name="LOCNUM">21</SimpleData>
+		<SimpleData name="LAT_DMS">39,45,22</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">110,59,23</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">SW 1/4 NE 1/4 S 26, T 12 S, R 8 E</SimpleData>
+		<SimpleData name="LOCCITY">Helper</SimpleData>
+		<SimpleData name="LOCCOUNTY">CARBON</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">21.899999999999999</SimpleData>
+		<SimpleData name="ALLSTRUC">23.199999999999999</SimpleData>
+		<SimpleData name="STRUCTYPE">MAST</SimpleData>
+		<SimpleData name="LIC_ID">12492</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-110.9897,39.7561</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.62">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">New Cingular Wireless PCS, LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKN218</SimpleData>
+		<SimpleData name="LOCNUM">5</SimpleData>
+		<SimpleData name="LAT_DMS">40,9,36</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">110,43,48</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">Cedar Mountain/Off Sam Wash Road</SimpleData>
+		<SimpleData name="LOCCITY">Duchesne</SimpleData>
+		<SimpleData name="LOCCOUNTY">DUCHESNE</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">15.199999999999999</SimpleData>
+		<SimpleData name="ALLSTRUC">18.300000000000001</SimpleData>
+		<SimpleData name="STRUCTYPE">TOWER</SimpleData>
+		<SimpleData name="LIC_ID">12492</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-110.73,40.16</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.63">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">Cellular, Inc. Financial Corporation</SimpleData>
+		<SimpleData name="CALLSIGN">KNKN323</SimpleData>
+		<SimpleData name="LOCNUM">2</SimpleData>
+		<SimpleData name="LAT_DMS">39,39,9</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">111,51,26</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">3.3 MI SOUTHWEST OF NEPHI AND 4 MI WEST OF DEATH HOLLOW SPRING</SimpleData>
+		<SimpleData name="LOCCITY">NEPHI</SimpleData>
+		<SimpleData name="LOCCOUNTY">JUAB</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="TOWREG">1059001</SimpleData>
+		<SimpleData name="SUPSTRUC">91.400000000000006</SimpleData>
+		<SimpleData name="ALLSTRUC">94.500000000000000</SimpleData>
+		<SimpleData name="STRUCTYPE">TOWER</SimpleData>
+		<SimpleData name="LIC_ID">12626</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.8572,39.6525</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.64">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">Cellular, Inc. Financial Corporation</SimpleData>
+		<SimpleData name="CALLSIGN">KNKN323</SimpleData>
+		<SimpleData name="LOCNUM">6</SimpleData>
+		<SimpleData name="LAT_DMS">39,21,58</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">112,33,58</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">0.9 MILES N OF US ROUTE 50 &amp; 1.9 MILES E OF THE SEVIER RIVER</SimpleData>
+		<SimpleData name="LOCCITY">DELTA</SimpleData>
+		<SimpleData name="LOCCOUNTY">MILLARD</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">30.500000000000000</SimpleData>
+		<SimpleData name="ALLSTRUC">33.500000000000000</SimpleData>
+		<SimpleData name="STRUCTYPE">TOWER</SimpleData>
+		<SimpleData name="LIC_ID">12626</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-112.5661,39.3661</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.65">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">Cellular, Inc. Financial Corporation</SimpleData>
+		<SimpleData name="CALLSIGN">KNKN323</SimpleData>
+		<SimpleData name="LOCNUM">9</SimpleData>
+		<SimpleData name="LAT_DMS">39,41,24</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">111,28,23</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">Fairview Site 28580 N 900 E</SimpleData>
+		<SimpleData name="LOCCITY">Fairview</SimpleData>
+		<SimpleData name="LOCCOUNTY">SANPETE</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">55.200000000000003</SimpleData>
+		<SimpleData name="ALLSTRUC">55.899999999999999</SimpleData>
+		<SimpleData name="STRUCTYPE">MAST</SimpleData>
+		<SimpleData name="LIC_ID">12626</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.4731,39.69</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.66">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">Cellular, Inc. Financial Corporation</SimpleData>
+		<SimpleData name="CALLSIGN">KNKN237</SimpleData>
+		<SimpleData name="LOCNUM">7</SimpleData>
+		<SimpleData name="LAT_DMS">39,25,14</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">110,24,3</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">APPROX. 9 MILES S-SW OF EAST CARBON CITY</SimpleData>
+		<SimpleData name="LOCCITY">CARBON CITY</SimpleData>
+		<SimpleData name="LOCCOUNTY">CARBON</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">54.600000000000001</SimpleData>
+		<SimpleData name="ALLSTRUC">57.899999999999999</SimpleData>
+		<SimpleData name="STRUCTYPE">TOWER</SimpleData>
+		<SimpleData name="LIC_ID">12762</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-110.4008,39.4206</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.67">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">Cellular, Inc. Financial Corporation</SimpleData>
+		<SimpleData name="CALLSIGN">KNKN237</SimpleData>
+		<SimpleData name="LOCNUM">1</SimpleData>
+		<SimpleData name="LAT_DMS">39,36,42</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">110,48,44</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">800 N 100th East</SimpleData>
+		<SimpleData name="LOCCITY">PRICE</SimpleData>
+		<SimpleData name="LOCCOUNTY">CARBON</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="TOWREG">1059283</SimpleData>
+		<SimpleData name="SUPSTRUC">61.899999999999999</SimpleData>
+		<SimpleData name="ALLSTRUC">65.500000000000000</SimpleData>
+		<SimpleData name="STRUCTYPE">TOWER</SimpleData>
+		<SimpleData name="LIC_ID">12762</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-110.8122,39.6117</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.68">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">Cellular, Inc. Financial Corporation</SimpleData>
+		<SimpleData name="CALLSIGN">KNKN237</SimpleData>
+		<SimpleData name="LOCNUM">4</SimpleData>
+		<SimpleData name="LAT_DMS">39,41,19</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">110,52,15</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">Helper 3 MILES SOUTHWEST OF</SimpleData>
+		<SimpleData name="LOCCITY">HELPER</SimpleData>
+		<SimpleData name="LOCCOUNTY">CARBON</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">34.399999999999999</SimpleData>
+		<SimpleData name="ALLSTRUC">34.399999999999999</SimpleData>
+		<SimpleData name="STRUCTYPE">TOWER</SimpleData>
+		<SimpleData name="LIC_ID">12762</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-110.8708,39.6886</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.69">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">Cellular, Inc. Financial Corporation</SimpleData>
+		<SimpleData name="CALLSIGN">KNKN237</SimpleData>
+		<SimpleData name="LOCNUM">10</SimpleData>
+		<SimpleData name="LAT_DMS">39,45,25</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">110,59,22</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">Soldier Site Section 26, T12S, R8E</SimpleData>
+		<SimpleData name="LOCCITY">Helper</SimpleData>
+		<SimpleData name="LOCCOUNTY">CARBON</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">45.700000000000003</SimpleData>
+		<SimpleData name="ALLSTRUC">45.700000000000003</SimpleData>
+		<SimpleData name="STRUCTYPE">MAST</SimpleData>
+		<SimpleData name="LIC_ID">12762</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-110.9894,39.7569</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.70">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">NEW CINGULAR WIRELESS PCS, LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKN225</SimpleData>
+		<SimpleData name="LOCNUM">12</SimpleData>
+		<SimpleData name="LAT_DMS">40,50,47</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">112,48,1</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">10 Miles N of I-80 at Exit 70</SimpleData>
+		<SimpleData name="LOCCITY">DELLE</SimpleData>
+		<SimpleData name="LOCCOUNTY">TOOELE</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">18.600000000000001</SimpleData>
+		<SimpleData name="ALLSTRUC">26.199999999999999</SimpleData>
+		<SimpleData name="STRUCTYPE">MAST</SimpleData>
+		<SimpleData name="LIC_ID">12968</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-112.8003,40.8464</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.71">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">New Cingular Wireless PCS, LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKQ383</SimpleData>
+		<SimpleData name="LOCNUM">4</SimpleData>
+		<SimpleData name="LAT_DMS">39,29,31</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">111,49,43</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">NE 1/4 SE 1/4 S 20, T 15 S, R 1 E</SimpleData>
+		<SimpleData name="LOCCITY">Levan</SimpleData>
+		<SimpleData name="LOCCOUNTY">JUAB</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="TOWREG">1037594</SimpleData>
+		<SimpleData name="SUPSTRUC">24.000000000000000</SimpleData>
+		<SimpleData name="ALLSTRUC">24.000000000000000</SimpleData>
+		<SimpleData name="STRUCTYPE">TOWER</SimpleData>
+		<SimpleData name="LIC_ID">13137</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.8286,39.4919</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.72">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">New Cingular Wireless PCS, LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKQ383</SimpleData>
+		<SimpleData name="LOCNUM">6</SimpleData>
+		<SimpleData name="LAT_DMS">39,43,58</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">111,56,37</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">2.4 miles N of State Route 132</SimpleData>
+		<SimpleData name="LOCCITY">NEPHI</SimpleData>
+		<SimpleData name="LOCCOUNTY">JUAB</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="TOWREG">1210829</SimpleData>
+		<SimpleData name="SUPSTRUC">136.199999999999989</SimpleData>
+		<SimpleData name="ALLSTRUC">137.800000000000011</SimpleData>
+		<SimpleData name="STRUCTYPE">TOWER</SimpleData>
+		<SimpleData name="LIC_ID">13137</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.9436,39.7328</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.73">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">New Cingular Wireless PCS, LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKQ383</SimpleData>
+		<SimpleData name="LOCNUM">9</SimpleData>
+		<SimpleData name="LAT_DMS">39,30,48</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">112,23,17</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">SE 1/4 SE 1/4 S 15, T 15 S, R 5 W</SimpleData>
+		<SimpleData name="LOCCITY">Lynndyl</SimpleData>
+		<SimpleData name="LOCCOUNTY">MILLARD</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="TOWREG">1206405</SimpleData>
+		<SimpleData name="SUPSTRUC">146.900000000000006</SimpleData>
+		<SimpleData name="ALLSTRUC">150.599999999999994</SimpleData>
+		<SimpleData name="STRUCTYPE">TOWER</SimpleData>
+		<SimpleData name="LIC_ID">13137</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-112.3881,39.5133</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.74">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">New Cingular Wireless PCS, LLC</SimpleData>
+		<SimpleData name="CALLSIGN">KNKQ383</SimpleData>
+		<SimpleData name="LOCNUM">15</SimpleData>
+		<SimpleData name="LAT_DMS">39,41,24</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">111,28,23</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">28580 North 9000 East</SimpleData>
+		<SimpleData name="LOCCITY">Fairview</SimpleData>
+		<SimpleData name="LOCCOUNTY">SANPETE</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">54.899999999999999</SimpleData>
+		<SimpleData name="ALLSTRUC">56.399999999999999</SimpleData>
+		<SimpleData name="STRUCTYPE">MAST</SimpleData>
+		<SimpleData name="LIC_ID">13137</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.4731,39.69</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.75">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">Wasatch Utah RSA No. 2 Limited Partnership</SimpleData>
+		<SimpleData name="CALLSIGN">KNKN242</SimpleData>
+		<SimpleData name="LOCNUM">1</SimpleData>
+		<SimpleData name="LAT_DMS">40,40,56</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">111,31,24</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">Atop Quarry Mountain, 2 miles N of</SimpleData>
+		<SimpleData name="LOCCITY">Park City</SimpleData>
+		<SimpleData name="LOCCOUNTY">SUMMIT</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="ALLSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="LIC_ID">13161</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.5233,40.6822</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.76">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">Wasatch Utah RSA No. 2 Limited Partnership</SimpleData>
+		<SimpleData name="CALLSIGN">KNKN242</SimpleData>
+		<SimpleData name="LOCNUM">3</SimpleData>
+		<SimpleData name="LAT_DMS">40,51,14</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">111,28,53</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">16.87 MILES EAST OF SALT LAKE CITY</SimpleData>
+		<SimpleData name="LOCCITY">SALT LAKE CITY</SimpleData>
+		<SimpleData name="LOCCOUNTY">SUMMIT</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="ALLSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="LIC_ID">13161</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.4814,40.8539</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.77">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">Wasatch Utah RSA No. 2 Limited Partnership</SimpleData>
+		<SimpleData name="CALLSIGN">KNKN242</SimpleData>
+		<SimpleData name="LOCNUM">4</SimpleData>
+		<SimpleData name="LAT_DMS">40,36,33</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">111,28,51</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">2.5 MILES SE OF</SimpleData>
+		<SimpleData name="LOCCITY">PARK CITY</SimpleData>
+		<SimpleData name="LOCCOUNTY">SUMMIT</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="ALLSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="LIC_ID">13161</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.4808,40.6092</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.78">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">Wasatch Utah RSA No. 2 Limited Partnership</SimpleData>
+		<SimpleData name="CALLSIGN">KNKN242</SimpleData>
+		<SimpleData name="LOCNUM">5</SimpleData>
+		<SimpleData name="LAT_DMS">40,33,12</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">111,28,45</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">ATOP WILSON PEAK NORTH OF</SimpleData>
+		<SimpleData name="LOCCITY">MIDWAY</SimpleData>
+		<SimpleData name="LOCCOUNTY">WASATCH</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="ALLSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="LIC_ID">13161</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.4792,40.5533</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.79">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">Wasatch Utah RSA No. 2 Limited Partnership</SimpleData>
+		<SimpleData name="CALLSIGN">KNKN242</SimpleData>
+		<SimpleData name="LOCNUM">6</SimpleData>
+		<SimpleData name="LAT_DMS">40,59,44</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">111,25,38</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">SE 1/4 S18, T3N, R5E, SLBM</SimpleData>
+		<SimpleData name="LOCCITY">Echo</SimpleData>
+		<SimpleData name="LOCCOUNTY">SUMMIT</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="ALLSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="LIC_ID">13161</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.4272,40.9956</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.80">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">Wasatch Utah RSA No. 2 Limited Partnership</SimpleData>
+		<SimpleData name="CALLSIGN">KNKN242</SimpleData>
+		<SimpleData name="LOCNUM">8</SimpleData>
+		<SimpleData name="LAT_DMS">40,10,36</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">111,3,15</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">Strawberry Reservoir</SimpleData>
+		<SimpleData name="LOCCITY">Mapleton</SimpleData>
+		<SimpleData name="LOCCOUNTY">WASATCH</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="ALLSTRUC">0.000000000000000</SimpleData>
+		<SimpleData name="LIC_ID">13161</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.0542,40.1767</coordinates></Point>
+  </Placemark>
+  <Placemark id="utahcountycellulartowers.81">
+	<ExtendedData><SchemaData schemaUrl="#utahcountycellulartowers">
+		<SimpleData name="LICENSEE">Wasatch Utah RSA No. 2 Limited Partnership</SimpleData>
+		<SimpleData name="CALLSIGN">KNKN242</SimpleData>
+		<SimpleData name="LOCNUM">10</SimpleData>
+		<SimpleData name="LAT_DMS">40,36,44</SimpleData>
+		<SimpleData name="LATDIR">N</SimpleData>
+		<SimpleData name="LON_DMS">111,31,38</SimpleData>
+		<SimpleData name="LONDIR">W</SimpleData>
+		<SimpleData name="LOCADD">SW1/4 S29T2SR4E</SimpleData>
+		<SimpleData name="LOCCITY">Park City</SimpleData>
+		<SimpleData name="LOCCOUNTY">SUMMIT</SimpleData>
+		<SimpleData name="LOCSTATE">UT</SimpleData>
+		<SimpleData name="NEPA">N</SimpleData>
+		<SimpleData name="SUPSTRUC">8.199999999999999</SimpleData>
+		<SimpleData name="ALLSTRUC">10.000000000000000</SimpleData>
+		<SimpleData name="STRUCTYPE">BANT</SimpleData>
+		<SimpleData name="LIC_ID">13161</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-111.5272,40.6122</coordinates></Point>
+  </Placemark>
+</Folder>
+</Document></kml>
