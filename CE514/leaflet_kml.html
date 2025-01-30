@@ -27,5 +27,107 @@
     <main>
         <div id="map"></div>
     </main>
+    <h1>Leaflet Map with KML Layers</h1>
+    <p>This project demonstrates how to integrate multiple KML layers into a Leaflet map. The data includes Utah county boundary, major roads, and cell phone towers in Utah county.</p>
+
+    <h2>Steps to Create the Map</h2>
+    <p>I started with shapefiles for Utah county boundary, Utah Major Roads, and Cell phone towers in Utah county from a previous CE 414 project. I uploaded these shapefiles into QGIS and then exported each layer as a KML using the export tool. After that, I found how to upload a KML online to Leaflet, and used ChatGPT to help me format and add a custom picture to the cell towers. I also made it so there were pop-ups for the cell towers, the Utah county boundary, and the roads.</p>
+
+    <h2>Code Implementation</h2>
+    <p>The following code initializes the Leaflet map and adds the KML layers:</p>
+
+    <pre><code>
+const map = L.map('map');
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+    </code></pre>
+
+    <p>Next, we define a function to load and add KML layers with optional click behavior:</p>
+
+    <pre><code>
+function loadKML(url, onEachFeature) {
+    fetch(url)
+        .then(res => {
+            if (!res.ok) throw new Error(`Failed to load ${url}`);
+            return res.text();
+        })
+        .then(kmltext => {
+            var parser = new DOMParser();
+            var kml = parser.parseFromString(kmltext, 'text/xml');
+            var track = new L.KML(kml);
+
+            if (onEachFeature) {
+                track.eachLayer(layer => {
+                    onEachFeature(layer);
+                });
+            }
+
+            map.addLayer(track);
+            console.log(`Loaded ${url}`);
+        })
+        .catch(error => console.error(error));
+}
+    </code></pre>
+
+    <p>We then load the major roads KML with a click event:</p>
+
+    <pre><code>
+loadKML('https://imathews-238.github.io/CE514/UC_major_roads.kml', layer => {
+    layer.on('click', function () {
+        alert(`Road: ${layer.feature?.properties?.name || "Unknown Road"}`);
+    });
+});
+    </code></pre>
+
+    <p>Similarly, we load the Utah County boundary KML with a click event:</p>
+
+    <pre><code>
+loadKML('https://imathews-238.github.io/CE514/Utah_county_boundary.kml', layer => {
+    layer.on('click', function () {
+        alert("Utah County");
+    });
+});
+    </code></pre>
+
+    <p>We define a custom icon for the cell towers that I obtained from Google. This picture was uploaded to Github and referenced from my repository:</p>
+
+    <pre><code>
+const towerIcon = L.icon({
+    iconUrl: 'https://imathews-238.github.io/CE514/cell_map_marker.png',
+    iconSize: [30, 30],  // Scales well based on zoom level
+    iconAnchor: [15, 30], // Center bottom anchor
+    popupAnchor: [0, -30] // Adjust popup positioning
+});
+    </code></pre>
+
+    <p>We create a feature group for cell towers to enable auto-zooming:</p>
+
+    <pre><code>
+const markerGroup = L.featureGroup().addTo(map);
+    </code></pre>
+
+    <p>Finally, we load the cell tower KML using Leaflet-Omnivore and fit the map to the marker bounds after loading:</p>
+
+    <pre><code>
+omnivore.kml('https://imathews-238.github.io/CE514/UC_cell_towers.kml')
+    .on('ready', function (e) {
+        const layer = e.target;
+        layer.eachLayer(marker => {
+            if (marker instanceof L.Marker) {
+                marker.setIcon(towerIcon);
+                marker.bindPopup("Cell Phone Tower");
+                markerGroup.addLayer(marker);
+            }
+        });
+
+        if (markerGroup.getLayers().length > 0) {
+            map.fitBounds(markerGroup.getBounds(), { padding: [50, 50] });
+        }
+    })
+    .addTo(map);
+    </code></pre>
+
 </body>
 </html>
