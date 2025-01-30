@@ -143,6 +143,15 @@ footer {
     width: 100%;
     background-color: #f4f4f4;
 }
+  pre {
+        background-color: #EEEEEE;
+    }
+  code {
+    font-family: Arial, sans-serif;
+    color: #333333; /* Near black color */
+    text-align: left;
+    display: block;
+    }
 
 @media (max-width: 768px) {
     body {
