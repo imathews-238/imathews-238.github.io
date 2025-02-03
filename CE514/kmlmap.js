@@ -74,57 +74,61 @@ omnivore.kml('https://imathews-238.github.io/CE514/UC_cell_towers.kml')
     })
     .addTo(map);
 
-var LocationLayers = {};  // Object to store country layers
+// Initialize global layers
+let stateLayer = null;
+let ghanaLayer = null;
+const statesKML = 'https://imathews-238.github.io/CE514/US_states.kml';
+const ghanaKML = 'https://imathews-238.github.io/CE514/Ghana.kml';
 
-function init() {
-    // Initialize the map and set the global view
-    map = L.map("map_id").setView([20, 0], 2);
-
-    // Add OpenStreetMap tiles
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
-
-    // Load KML files into countryLayers object
-    let Location = ["australia", "bahrain", "canada", "cayman", "czechia", "england", 
-                     "france", "germany", "japan", "mexico", "spain", "switzerland", 
-                     "thailand", "thenetherlands", "usa", "vietnam"];
-    
-    countries.forEach(Location => {
-        LocationLayers[country] = omnivore.kml(`kml/${Location}.kml`).on('ready', function() {
-            this.setStyle({color: "blue"});  // Optional: Set country boundary color
-        });
-    });
-
-    // Reset view to the world
-    setLocation("none");
-}
-
-function setLocation(theLocation) {
-    console.log("Selected:", theLocation);
-
-    // Remove all layers before adding a new one
-    Object.values(LocationLayers).forEach(layer => map.removeLayer(layer));
-
-    if (theCountry !== "none") {
-        let selectedLayer = LocationLayers[theLocation];
-        if (selectedLayer) {
-            map.addLayer(selectedLayer);
-            map.fitBounds(selectedLayer.getBounds());
-            document.getElementById("viewing").innerText = fullName(theLocation);
-        }
-    } else {
+// Function to load and filter KML states dynamically
+function loadFilteredState(selectedLocation) {
+    if (!selectedLocation || selectedLocation === "none") {
+        // Reset to global view
         map.setView([20, 0], 2);
         document.getElementById("viewing").innerText = "Earth";
+        document.getElementById("ifInfo").src = "https://en.wikipedia.org/wiki/Earth";
+        return;
+    }
+
+    // Remove existing state layers
+    if (stateLayer) map.removeLayer(stateLayer);
+    if (ghanaLayer) map.removeLayer(ghanaLayer);
+
+    if (selectedLocation === "ghana") {
+        // Load and display Ghana KML
+        omnivore.kml(ghanaKML).on('ready', function () {
+            ghanaLayer = this;
+            ghanaLayer.setStyle({ color: "blue" });
+            map.addLayer(ghanaLayer);
+            map.fitBounds(ghanaLayer.getBounds());
+            document.getElementById("viewing").innerText = "Ghana";
+            document.getElementById("ifInfo").src = "https://en.wikipedia.org/wiki/Ghana";
+        });
+    } else {
+        // Load and filter only the selected state
+        omnivore.kml(statesKML).on('ready', function () {
+            let fullLayer = this;
+            let filteredState = L.geoJSON(fullLayer.toGeoJSON(), {
+                filter: function (feature) {
+                    return feature.properties.name.toLowerCase() === selectedLocation;
+                },
+                style: { color: "blue" }
+            });
+
+            if (filteredState.getLayers().length > 0) {
+                stateLayer = filteredState;
+                map.addLayer(stateLayer);
+                map.fitBounds(stateLayer.getBounds());
+                document.getElementById("viewing").innerText = fullName(selectedLocation);
+                document.getElementById("ifInfo").src = "https://en.wikipedia.org/wiki/" + fullName(selectedLocation);
+            } else {
+                alert("State not found in the KML file!");
+            }
+        });
     }
 }
 
-function fullName(country) {
-    const names = {
-        "england": "United Kingdom",
-        "usa": "United States of America",
-        "thenetherlands": "The Netherlands",
-        "cayman": "Cayman Islands"
-    };
-    return names[country] || country.charAt(0).toUpperCase() + country.slice(1);
+// Function to capitalize the state name correctly
+function fullName(location) {
+    return location.charAt(0).toUpperCase() + location.slice(1);
 }
