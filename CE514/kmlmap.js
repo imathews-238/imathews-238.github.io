@@ -112,13 +112,21 @@ const stateBounds = {
   "ghana": [[4.5, -3.3], [11.2, 1.2]]
 };
 
+// Define the function that will be called when the dropdown changes
+function setLocation(selectedValue) {
+  console.log("Dropdown selection changed to:", selectedValue);
+  zoomToLocation(selectedValue);
+}
+
 // Function to zoom to a selected location from dropdown
 function zoomToLocation(selectedLocation) {
   // If nothing or 'none' is selected, reset to a global view
   if (!selectedLocation || selectedLocation === "none") {
     console.log("Resetting view to Earth");
     map.setView([20, 0], 2);
-    document.getElementById("viewing").innerText = "Earth";
+    if(document.getElementById("viewing")){
+      document.getElementById("viewing").innerText = "Earth";
+    }
     return;
   }
 
@@ -127,10 +135,12 @@ function zoomToLocation(selectedLocation) {
   if (stateBounds[selectedLocation]) {
     // Create a Leaflet LatLngBounds object from the coordinate array
     let bounds = L.latLngBounds(stateBounds[selectedLocation]);
-    console.log(`Zooming to ${selectedLocation}:`, bounds);
+    console.log(`Zooming to ${selectedLocation} with bounds:`, bounds);
     map.fitBounds(bounds);
-    document.getElementById("viewing").innerText =
-      selectedLocation.charAt(0).toUpperCase() + selectedLocation.slice(1);
+    if(document.getElementById("viewing")){
+      document.getElementById("viewing").innerText =
+        selectedLocation.charAt(0).toUpperCase() + selectedLocation.slice(1);
+    }
   } else {
     console.error("Coordinates for the selected location are not defined!");
     alert("Coordinates for the selected location are not defined!");
