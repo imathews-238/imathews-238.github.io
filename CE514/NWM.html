@@ -22,11 +22,34 @@
 <h2>Enter a Reach ID below to get the short-range forecast from the NWM:</h2>
 <br>
 
-        <form id="reach-id-form">
-            <label for="reach-id">Reach ID:</label>
-            <input type="text" id="reach-id" name="reach-id" required>
-            <button type="submit">Get Forecast</button>
-        </form>
+<label for="reachIdInput">Enter Reach ID:</label>
+<input type="text" id="reachIdInput" placeholder="Enter Reach ID">
+
+<label for="forecastTypeSelect">Select Forecast Type:</label>
+<select id="forecastTypeSelect">
+  <option value="short_range">Short Range</option>
+  <option value="medium_range">Medium Range</option>
+  <option value="long_range">Long Range</option>
+</select>
+
+<button onclick="getForecast()">Get Forecast</button>
+
+<div id="forecast-container" style="display: none;">
+  <h2>Forecast Data</h2>
+  <table id="timeseries-datatable">
+    <thead>
+      <tr>
+        <th>Time</th>
+        <th>Streamflow</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <canvas id="streamflowChart"></canvas>
+</div>
+        
+ 
 <br>
         <h2>How Does it Work?</h2>
         <br>
