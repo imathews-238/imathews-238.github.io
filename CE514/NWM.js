@@ -1,90 +1,98 @@
-        // Event listener for the form submission
-        document.getElementById('reach-id-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent the form from submitting normally
-            const reachId = document.getElementById('reach-id').value;
-            fetchForecastData(reachId);
-        });
+async function getForecast() {
+  const reachId = document.getElementById('reachIdInput').value;
+  const forecastType = document.getElementById('forecastTypeSelect').value; // Get the selected forecast type
 
-        // Fetch forecast data for the given reach ID
-        function fetchForecastData(reachId) {
-            // Replace this URL with the actual API URL from the National Water Model (NWM)
-            const url = `https://api.weather.gov/points/${reachId}/forecast`; // Example URL; replace with the NWM API
+  if (!reachId) {
+    alert("Please enter a Reach ID.");
+    return;
+  }
 
-            fetch(url)
-                .then(response => response.json())
-                .then(data => {
-                    const forecastData = data.properties.periods; // Assuming this is the structure of the response
-                    displayForecastData(forecastData);
-                    drawForecastPlot(forecastData);
-                })
-                .catch(error => {
-                    console.error('Error fetching forecast data:', error);
-                    alert('Failed to fetch forecast data for the given Reach ID.');
-                });
+  const forecastContainer = document.getElementById('forecast-container');
+  forecastContainer.style.display = 'block';
+
+  try {
+    const apiUrl = `https://api.water.noaa.gov/nwps/v1/reaches/${reachId}/streamflow?series=${forecastType}`;
+    console.log("Fetching data from:", apiUrl);
+
+    const response = await fetch(apiUrl);
+    if (!response.ok) {
+      throw new Error(`HTTP error status: ${response.status} - ${response.statusText}`);
+    }
+
+    const json_data = await response.json();
+    console.log("API Response:", json_data);
+
+    if (!json_data[forecastType] || !json_data[forecastType].series || !json_data[forecastType].series.data || json_data[forecastType].series.data.length === 0) {
+      throw new Error("No forecast data available for this Reach ID and forecast type.");
+    }
+
+    const streamflowData = json_data[forecastType].series.data;
+    const timestamps = streamflowData.map(item => item.validTime);
+    const flowValues = streamflowData.map(item => item.flow);
+
+    // Update the table
+    const table = document.getElementById('timeseries-datatable').getElementsByTagName('tbody')[0];
+    table.innerHTML = "";
+
+    for (let i = 0; i < streamflowData.length; i++) {
+      const row = table.insertRow();
+      const timestampCell = row.insertCell();
+      const flowCell = row.insertCell();
+      timestampCell.textContent = timestamps[i];
+      flowCell.textContent = flowValues[i];
+    }
+
+    // Update or create the chart
+    const ctx = document.getElementById('streamflowChart').getContext('2d');
+    let chart = Chart.getChart('streamflowChart');
+
+    if (chart) {
+      chart.destroy();
+    }
+
+    chart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: timestamps,
+        datasets: [{
+          label: `Streamflow Forecast (${forecastType.replace('_', ' ')})`,
+          data: flowValues,
+          borderColor: 'blue',
+          borderWidth: 1,
+          fill: false
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          x: {
+            display: true,
+            title: {
+              display: true,
+              text: 'Time'
+            }
+          },
+          y: {
+            display: true,
+            title: {
+              display: true,
+              text: 'Streamflow (cfs)'
+            }
+          }
         }
+      }
+    });
 
-        // Display forecast data in a table
-        function displayForecastData(forecastData) {
-            const tableBody = document.querySelector('#forecast-table tbody');
-            tableBody.innerHTML = ''; // Clear any previous data
+  } catch (error) {
+    console.error('Error fetching or processing data:', error);
+    alert("Error fetching forecast: " + error.message);
 
-            forecastData.forEach(period => {
-                const row = document.createElement('tr');
-                const timeCell = document.createElement('td');
-                const valueCell = document.createElement('td');
+    // Clear the table and chart on error
+    document.getElementById('timeseries-datatable').getElementsByTagName('tbody')[0].innerHTML = "";
 
-                timeCell.textContent = period.startTime; // Assuming 'startTime' contains the time
-                valueCell.textContent = period.value; // Assuming 'value' contains the forecast value
-
-                row.appendChild(timeCell);
-                row.appendChild(valueCell);
-                tableBody.appendChild(row);
-            });
-
-            // Show the table
-            document.getElementById('forecast-table').style.display = 'table';
-        }
-
-        // Draw forecast plot using Chart.js
-        function drawForecastPlot(forecastData) {
-            const times = forecastData.map(period => period.startTime); // Time values
-            const values = forecastData.map(period => period.value); // Forecast values
-
-            const ctx = document.getElementById('forecast-plot').getContext('2d');
-            const chart = new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: times,
-                    datasets: [{
-                        label: 'Forecast',
-                        data: values,
-                        borderColor: 'rgba(75, 192, 192, 1)',
-                        fill: false
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    scales: {
-                        x: {
-                            type: 'time',
-                            time: {
-                                unit: 'hour'
-                            },
-                            title: {
-                                display: true,
-                                text: 'Time'
-                            }
-                        },
-                        y: {
-                            title: {
-                                display: true,
-                                text: 'Forecast Value'
-                            }
-                        }
-                    }
-                }
-            });
-
-            // Show the plot
-            document.getElementById('forecast-plot').style.display = 'block';
-        }
+    let chart = Chart.getChart('streamflowChart');
+    if (chart) {
+      chart.destroy();
+    }
+  }
+}
