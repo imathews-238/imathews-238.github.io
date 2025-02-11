@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NWM Forecast Retrieval</title>
+    <link rel="stylesheet" href="https://imathews-238.github.io/CE514/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://imathews-238.github.io/CE514/NWM.js" defer></script>
+
+</head>
+<body>
+    <header>
+        <h1>US National Water Model Forecast Retriever</h1>
+        <p><strong>Name:</strong> Ian Mathews</p>
+        <p><strong>Assignment:</strong> A8 - Retrieve and Plot Data from the US National Water Model</p>
+        <p><strong>Class:</strong> CE 514 Geospatial Software Development</p>
+        <p><strong>Date:</strong> February 11, 2025</p>
+    </header>
+    <div class="container">
+
+<h2>Enter a Reach ID below to get the short-range forecast from the NWM:</h2>
+<br>
+
+        <form id="reach-id-form">
+            <label for="reach-id">Reach ID:</label>
+            <input type="text" id="reach-id" name="reach-id" required>
+            <button type="submit">Get Forecast</button>
+        </form>
+<br>
+        <h2>How Does it Work?</h2>
+        <br>
+        <p>
+            This application retrieves short-range forecast data from the US National Water Model (NWM). You provide a Reach ID, and the system displays the forecast data and graphs it.
+        </p>
+        <br>
+        <h3>Learn More about the US National Water Model</h3>
+        <br>
+        <div class="links">
+        <ul>
+            <a href="https://water.noaa.gov/about/nwm" target="_blank">US National Water Model Overview</a>
+            <a href="https://www.sciencedirect.com/science/article/pii/S1364815224001841" target="_blank">Scientific Article 1</a>
+            <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/1752-1688.13184" target="_blank">Scientific Article 2</a>
+        </ul>
+        </div>
+        <br>
+        <h2>Forecast Data</h2>
+        <br>
+        <div id="forecast-data">
+            <table id="forecast-table" class="forecast-table" style="display: none;">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Forecast Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data will be inserted here dynamically -->
+                </tbody>
+            </table>
+
+            <canvas id="forecast-plot" style="display: none;"></canvas>
+        </div>
+    </div>
+</body>
+</html>
