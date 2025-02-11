@@ -45,28 +45,10 @@
         <br>
         <h2>How Does it Work?</h2>
         <br>
-        <h3>Inputting the Reach ID</h3>
-        <p>Users start by entering a specific Reach ID into the input field provided.</p>
+        <p>
+            This application retrieves short-range forecast data from the US National Water Model (NWM). You provide a Reach ID, and the system displays the forecast data and graphs it.
+        </p>
         <br>
-        <h3>API Request to NWM</h3>
-        <p>Once the Reach ID is entered, the application sends a request to the NOAA NWPS API to fetch the forecast data for the selected Reach ID and forecast type.</p>
-        <br>
-        <h3>Processing the API Response</h3>
-        <p>The application checks the API response for any errors and then parses the JSON data received.</p>
-        <br>
-        <h3>Data Extraction</h3>
-        <p>The relevant data, including timestamps and streamflow values, is extracted from the JSON response.</p>
-        <br>
-        <h3>Updating the Table</h3>
-        <p>The extracted data is then used to update the table, displaying the forecast information in a clear and organized manner.</p>
-        <br>
-        <h3>Chart Visualization</h3>
-        <p>Using Chart.js, the application creates or updates a chart to visually represent the forecast data.</p>
-        <br>
-        <h3>Error Management</h3>
-        <p>If any errors occur during the API call or data processing, the application handles them gracefully and informs the user with appropriate messages.</p>
-        <br>
-        <h3>Learn More about the US National Water Model</h3>
         <br>
         <div class="links">
             <ul>
