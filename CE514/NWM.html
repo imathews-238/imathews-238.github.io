@@ -43,11 +43,141 @@
         </div>
         <br>
         <br>
-        <h2>How Does it Work?</h2>
+  <h2>How Does it Work?</h2>
         <br>
-        <p>
-            This application retrieves short-range forecast data from the US National Water Model (NWM). You provide a Reach ID, and the system displays the forecast data and graphs it.
-        </p>
+        <p>This code is designed to retrieve and display streamflow forecasts from the US National Water Model (NWM) based on a user-provided Reach ID. Here's an explanation of how it works:</p>
+        <br>
+        <h3>User Input</h3>
+        <p>The user enters a Reach ID into the input field and selects a forecast type (short, medium, or long range) from a dropdown menu. This is captured using the following HTML elements:</p>
+        <pre><code>
+&lt;label for="reachIdInput"&gt;Enter Reach ID:&lt;/label&gt;
+&lt;input type="text" id="reachIdInput" placeholder="Enter Reach ID"&gt;
+&lt;label for="forecastTypeSelect"&gt;Select Forecast Type:&lt;/label&gt;
+&lt;select id="forecastTypeSelect"&gt;
+    &lt;option value="short_range"&gt;Short Range&lt;/option&gt;
+    &lt;option value="medium_range"&gt;Medium Range&lt;/option&gt;
+    &lt;option value="long_range"&gt;Long Range&lt;/option&gt;
+&lt;/select&gt;
+&lt;button onclick="getForecast()"&gt;Get Forecast&lt;/button&gt;
+        </code></pre>
+        <br>
+        <h3>API Request</h3>
+        <p>When the user clicks the "Get Forecast" button, the <code>getForecast()</code> function is triggered. This function constructs the API URL based on the Reach ID and forecast type, and sends a request to the NOAA NWPS API:</p>
+        <pre><code>
+const apiUrl = `https://api.water.noaa.gov/nwps/v1/reaches/${reachId}/streamflow?series=${forecastType}`;
+const response = await fetch(apiUrl);
+        </code></pre>
+        <br>
+        <h3>Handling the Response</h3>
+        <p>The function checks if the API response is successful. If not, it throws an error. If the response is successful, it parses the JSON data:</p>
+        <pre><code>
+if (!response.ok) {
+    throw new Error(`HTTP error status: ${response.status} - ${response.statusText}`);
+}
+const json_data = await response.json();
+        </code></pre>
+        <br>
+        <h3>Extracting Data</h3>
+        <p>Depending on the forecast type, the function extracts the relevant data (timestamps and streamflow values) from the JSON response:</p>
+        <pre><code>
+let streamflowData = [];
+switch (forecastType) {
+    case 'short_range':
+        if (json_data.shortRange && json_data.shortRange.series && json_data.shortRange.series.data) {
+            streamflowData = json_data.shortRange.series.data;
+        }
+        break;
+    case 'medium_range':
+        if (json_data.mediumRange) {
+            for (const prop in json_data.mediumRange) {
+                if (json_data.mediumRange[prop].data) {
+                    streamflowData = streamflowData.concat(json_data.mediumRange[prop].data);
+                }
+            }
+        }
+        break;
+    case 'long_range':
+        if (json_data.longRange) {
+            for (const prop in json_data.longRange) {
+                if (json_data.longRange[prop].data) {
+                    streamflowData = streamflowData.concat(json_data.longRange[prop].data);
+                }
+            }
+        }
+        break;
+    default:
+        throw new Error("Invalid forecast type selected.");
+}
+        </code></pre>
+        <br>
+        <h3>Updating the Table</h3>
+        <p>The extracted data is used to update an HTML table, displaying the forecast information:</p>
+        <pre><code>
+const table = document.getElementById('timeseries-datatable').getElementsByTagName('tbody')[0];
+table.innerHTML = "";
+for (let i = 0; i < streamflowData.length; i++) {
+    const row = table.insertRow();
+    const timestampCell = row.insertCell();
+    const flowCell = row.insertCell();
+    timestampCell.textContent = timestamps[i];
+    flowCell.textContent = flowValues[i];
+}
+        </code></pre>
+        <br>
+        <h3>Creating/Updating the Chart</h3>
+        <p>The application uses Chart.js to create or update a chart that visually represents the forecast data:</p>
+        <pre><code>
+const ctx = document.getElementById('streamflowChart').getContext('2d');
+let chart = Chart.getChart('streamflowChart');
+if (chart) {
+    chart.destroy();
+}
+chart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: timestamps,
+        datasets: [{
+            label: `Streamflow Forecast (${forecastType.replace('_', ' ').toUpperCase()})`,
+            data: flowValues,
+            borderColor: 'blue',
+            borderWidth: 1,
+            fill: false
+        }]
+    },
+    options: {
+        responsive: true,
+        scales: {
+            x: {
+                display: true,
+                title: {
+                    display: true,
+                    text: 'Time'
+                }
+            },
+            y: {
+                display: true,
+                title: {
+                    display: true,
+                    text: 'Streamflow'
+                }
+            }
+        }
+    }
+});
+        </code></pre>
+        <br>
+        <h3>Error Handling</h3>
+        <p>The application includes error handling to manage any issues that arise during the API call or data processing, ensuring that users are informed of any problems:</p>
+        <pre><code>
+} catch (error) {
+    console.error('Error fetching or processing data:', error);
+    alert("Error fetching forecast: " + error.message);
+    const table = document.getElementById('timeseries-datatable').getElementsByTagName('tbody')[0];
+    table.innerHTML = "";
+    const chartCanvas = document.getElementById('streamflowChart');
+    chartCanvas.innerHTML = "";
+}
+        </code></pre>
         <br>
         <br>
         <div class="links">
