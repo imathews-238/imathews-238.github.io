@@ -1,7 +1,6 @@
 async function getForecast() {
   const reachId = document.getElementById('reachIdInput').value;
-  const forecastType = document.getElementById('forecastTypeSelect').value; // Get the selected forecast type
-
+  const forecastType = document.getElementById('forecastTypeSelect').value;
   if (!reachId) {
     alert("Please enter a Reach ID.");
     return;
@@ -12,21 +11,46 @@ async function getForecast() {
 
   try {
     const apiUrl = `https://api.water.noaa.gov/nwps/v1/reaches/${reachId}/streamflow?series=${forecastType}`;
-    console.log("Fetching data from:", apiUrl);
-
     const response = await fetch(apiUrl);
     if (!response.ok) {
       throw new Error(`HTTP error status: ${response.status} - ${response.statusText}`);
     }
 
     const json_data = await response.json();
-    console.log("API Response:", json_data);
+    let streamflowData = [];
 
-    if (!json_data[forecastType] || !json_data[forecastType].series || !json_data[forecastType].series.data || json_data[forecastType].series.data.length === 0) {
-      throw new Error("No forecast data available for this Reach ID and forecast type.");
+    switch (forecastType) {
+      case 'short_range':
+        if (json_data.shortRange && json_data.shortRange.series && json_data.shortRange.series.data) {
+          streamflowData = json_data.shortRange.series.data;
+        }
+        break;
+      case 'medium_range':
+        if (json_data.mediumRange) {
+          for (const prop in json_data.mediumRange) {
+            if (json_data.mediumRange[prop].data) {
+              streamflowData = streamflowData.concat(json_data.mediumRange[prop].data);
+            }
+          }
+        }
+        break;
+      case 'long_range':
+        if (json_data.longRange) {
+          for (const prop in json_data.longRange) {
+            if (json_data.longRange[prop].data) {
+              streamflowData = streamflowData.concat(json_data.longRange[prop].data);
+            }
+          }
+        }
+        break;
+      default:
+        throw new Error("Invalid forecast type selected.");
     }
 
-    const streamflowData = json_data[forecastType].series.data;
+    if (streamflowData.length === 0) {
+      throw new Error(`No ${forecastType.replace('_', ' ')} forecast data available for this Reach ID.`);
+    }
+
     const timestamps = streamflowData.map(item => item.validTime);
     const flowValues = streamflowData.map(item => item.flow);
 
@@ -55,7 +79,7 @@ async function getForecast() {
       data: {
         labels: timestamps,
         datasets: [{
-          label: `Streamflow Forecast (${forecastType.replace('_', ' ')})`,
+          label: `Streamflow Forecast (${forecastType.replace('_', ' ').toUpperCase()})`,
           data: flowValues,
           borderColor: 'blue',
           borderWidth: 1,
@@ -76,7 +100,7 @@ async function getForecast() {
             display: true,
             title: {
               display: true,
-              text: 'Streamflow (cfs)'
+              text: 'Streamflow'
             }
           }
         }
@@ -87,12 +111,11 @@ async function getForecast() {
     console.error('Error fetching or processing data:', error);
     alert("Error fetching forecast: " + error.message);
 
-    // Clear the table and chart on error
-    document.getElementById('timeseries-datatable').getElementsByTagName('tbody')[0].innerHTML = "";
+    const table = document.getElementById('timeseries-datatable').getElementsByTagName('tbody')[0];
+    table.innerHTML = "";
 
-    let chart = Chart.getChart('streamflowChart');
-    if (chart) {
-      chart.destroy();
-    }
+    const chartCanvas = document.getElementById('streamflowChart');
+    chartCanvas.innerHTML = "";
+
   }
 }
