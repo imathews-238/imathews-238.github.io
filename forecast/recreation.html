@@ -11,7 +11,7 @@
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; background-color: #f4f4f4; }
         header { background: #004466; color: white; padding: 20px; font-size: 22px; }
         #description { margin: 15px; padding: 10px; font-size: 16px; max-width: 80%; margin: auto; }
-        #map { height: 60vh; width: 80%; margin: 20px auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+        #map { height: 30vh; width: 80%; margin: 20px auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
         #controls { margin: 10px; padding: 8px; }
         #forecast-select { padding: 8px; font-size: 16px; }
         #chart-container { width: 80%; margin: 20px auto; background: white; padding: 10px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
@@ -29,14 +29,14 @@
 <body>
 
     <header>
-        Colorado Recreation River Forecast & Safety
+        Colorado River Flow Forecast & Safety
     </header>
 
     <div id="description">
         <p>
             This web application provides real-time and forecasted river flow data for outdoor recreation and safety in Colorado.
             Users can check rivers to assess **rafting, fishing, and flood risks** in Colorado. Click on a river 
-            point to see forecasted flow rates and warnings based on safety thresholds. Flood data is provided by accessing data from the U.S. National Water Model (NWM).
+            point to see forecasted flow rates and warnings based on safety thresholds. Flood data is provided by accessing data from the U.S. National Water Model (NWM)
         </p>
     </div>
 
@@ -63,9 +63,6 @@
     <div id="status-card" class="safe">
         ✅ Select a river point for safety status.
     </div>
-
-    <!-- Mockup Gauge -->
-    <div class="gauge"></div>
 
     <!-- Chart Container -->
     <div id="chart-container">
