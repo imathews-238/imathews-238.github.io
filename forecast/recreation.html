@@ -7,6 +7,8 @@
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-kml@latest/L.KML.js"></script>
+    <script src="https://unpkg.com/leaflet-omnivore@0.3.4/leaflet-omnivore.min.js"></script>
     <link rel="stylesheet" href="app.css">
     <script src="app.js" defer></script>
 
@@ -25,23 +27,55 @@
         </p>
     </div>
 
-    <div id="controls">
-        <label for="forecast-select">Select Forecast Range:</label>
-        <select id="forecast-select">
-            <option value="short">Short-Range (Next 24 hrs)</option>
-            <option value="medium">Medium-Range (Next 3 days)</option>
-            <option value="long">Long-Range (Next 7 days)</option>
+
+    <div class="container">
+        <h2>Select Forecast Range:</h2>
+        <br>
+        <label for="reachIdInput" style="display: none;">Enter Reach ID:</label>
+        <input type="text" id="reachIdInput" placeholder="Enter Reach ID" style="display: none;">
+        <label for="forecastTypeSelect">Select Forecast Type:</label>
+        <select id="forecastTypeSelect">
+            <option value="short_range">Short Range</option>
+            <option value="medium_range">Medium Range</option>
+            <option value="long_range">Long Range</option>
         </select>
-    </div>
+        <div id="forecast-container" style="display: none;">
+            <h2>Forecast Data</h2>
+            <table id="timeseries-datatable">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Streamflow</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <canvas id="streamflowChart"></canvas>
+        </div>
+
+        <br>   
+<h1>Zoom To Major Rivers in Colorado</h1>
+<select onchange="setLocation(this.value)">
+    <option value="none">(Choose a Location)</option>
+    <option value="Rio_Grande">Rio Grande</option>
+    <option value="Arkansas">Arkansas</option>
+    <option value="Gunnison">Gunnison</option>
+    <option value="South_Platte">South Platte</option>
+    <option value="Colorado">Colorado</option>
+</select>
 
     <!-- Map Section -->
-    <div id="map"></div>
+    <div id =map-container-extra>
+        <div id="map"></div>
+        <div id="layer-controls">
+            <h2>Layers</h2>
+        </div>
 
     <!-- Flow Level Legend -->
     <div id="legend">
-        <div class="legend-item"><span class="legend-box" style="background:#4CAF50;"></span> Safe (1500-4000 CFS)</div>
+        <div class="legend-item"><span class="legend-box" style="background:#4CAF50;"></span> Safe (0-800 CFS)</div>
         <div class="legend-item"><span class="legend-box" style="background:#FF9800;"></span> Caution (800-1500 CFS)</div>
-        <div class="legend-item"><span class="legend-box" style="background:#F44336;"></span> Danger (>4000 CFS)</div>
+        <div class="legend-item"><span class="legend-box" style="background:#F44336;"></span> Danger (>1500 CFS)</div>
     </div>
 
     <!-- Status Display -->
