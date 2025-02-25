@@ -19,7 +19,7 @@ header { background: #004466; color: white; padding: 20px; font-size: 22px; }
 #layer-controls {
     position: absolute;
     top: 10px;
-    right: 10px;
+    right: 11%;
     background-color: white;
     padding: 10px;
     border-radius: 10px;

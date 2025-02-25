@@ -6,40 +6,40 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; OpenStreetMap contributors'
 }).addTo(map);
 
-// Example River Points
-var riverPoints = [
-    { name: "Arkansas River", lat: 38.842, lon: -106.133 },
-    { name: "Colorado River", lat: 39.368, lon: -107.728 },
-    { name: "South Platte River", lat: 40.167, lon: -104.833 },
-    { name: "Gunnison River", lat: 38.544, lon: -107.324 },
-    { name: "Rio Grande River", lat: 37.669, lon: -106.388 }
-];
+// // Example River Points
+// var riverPoints = [
+//     { name: "Arkansas River", lat: 38.842, lon: -106.133 },
+//     { name: "Colorado River", lat: 39.368, lon: -107.728 },
+//     { name: "South Platte River", lat: 40.167, lon: -104.833 },
+//     { name: "Gunnison River", lat: 38.544, lon: -107.324 },
+//     { name: "Rio Grande River", lat: 37.669, lon: -106.388 }
+// ];
 
-// Function to get marker color
-function getMarkerColor(flow) {
-    if (flow > 4000) return "red"; 
-    if (flow < 1500) return "orange"; 
-    return "green"; 
-}
+// // Function to get marker color
+// function getMarkerColor(flow) {
+//     if (flow > 1500) return "red"; 
+//     if (flow < 1499) return "orange"; 
+//     return "green"; 
+// }
 
-// Add Points to Map
-riverPoints.forEach(point => {
-    var flowRate = Math.floor(Math.random() * (5000 - 800) + 800);
-    var markerColor = getMarkerColor(flowRate);
-    var marker = L.circleMarker([point.lat, point.lon], {
-        radius: 8,
-        fillColor: markerColor,
-        color: "#000",
-        weight: 1,
-        opacity: 1,
-        fillOpacity: 0.8
-    }).addTo(map)
-        .bindPopup(`<b>${point.name}</b><br>Click for flow data`)
-        .on('click', function() { 
-            updateChart(point.name, flowRate); 
-            getForecast(layerUrls[point.name].reachId, point.name); // Call getForecast with reachId and river name
-        });
-});
+// // Add Points to Map
+// riverPoints.forEach(point => {
+//     var flowRate = Math.floor(Math.random() * (5000 - 800) + 800);
+//     var markerColor = getMarkerColor(flowRate);
+//     var marker = L.circleMarker([point.lat, point.lon], {
+//         radius: 8,
+//         fillColor: markerColor,
+//         color: "#000",
+//         weight: 1,
+//         opacity: 1,
+//         fillOpacity: 0.8
+//     }).addTo(map)
+//         .bindPopup(`<b>${point.name}</b><br>Click for flow data`)
+//         .on('click', function() { 
+//             updateChart(point.name, flowRate); 
+//             getForecast(layerUrls[point.name].reachId, point.name); // Call getForecast with reachId and river name
+//         });
+// });
 // Chart.js Setup
 var ctx = document.getElementById('flowChart').getContext('2d');
 var flowChart = new Chart(ctx, {
@@ -69,15 +69,6 @@ function updateChart(riverName, flowRate) {
         statusCard.innerHTML = `✅ Flow at ${riverName} is safe for recreation.`;
         statusCard.className = "safe";
     }
-}
-
-function generateMockData() {
-    var dates = [], values = [];
-    for (var i = 0; i < 7; i++) {
-        dates.push(`Day ${i+1}`);
-        values.push(Math.floor(Math.random() * (5000 - 800) + 800));
-    }
-    return { dates, values };
 }
 
 // Store all layers globally
@@ -110,6 +101,85 @@ const layerUrls = {
     }
 };
 
+// Add this function to get return periods for a specific reach ID
+function getReturnPeriods(reachId) {
+    const returnPeriods = {
+        bands: [],
+        values: {}
+    };
+    
+    // Find the index of the reach ID in the JSON data
+
+    const nwm_stream_return_periods = {
+        "feature_id": {
+          "0": 226585,
+          "1": 976192,
+          "2": 3176028,
+          "3": 3233525,
+          "4": 17900377
+        },
+        "return_period_2": {
+          "0": 422.29,
+          "1": 210.23,
+          "2": 578.44,
+          "3": 246.41,
+          "4": 306.99
+        },
+        "return_period_5": {
+          "0": 632.83,
+          "1": 301.13,
+          "2": 802.96,
+          "3": 369.76,
+          "4": 546.14
+        },
+        "return_period_10": {
+          "0": 772.22,
+          "1": 361.32,
+          "2": 951.61,
+          "3": 451.43,
+          "4": 704.47
+        },
+        "return_period_25": {
+          "0": 948.34,
+          "1": 437.37,
+          "2": 1139.43,
+          "3": 554.61,
+          "4": 904.53
+        },
+        "return_period_50": {
+          "0": 1079,
+          "1": 493.78,
+          "2": 1278.77,
+          "3": 631.16,
+          "4": 1052.94
+        },
+        "return_period_100": {
+          "0": 1208.7,
+          "1": 549.78,
+          "2": 1417.08,
+          "3": 707.14,
+          "4": 1200.26
+        }
+      };
+    
+    const index = Object.values(nwm_stream_return_periods.feature_id)
+        .findIndex(id => id === reachId);
+        console.log('index', index)
+    
+    if (index !== -1) {
+        // Get all return period values for this reach
+        returnPeriods.values = {
+            '2_year': nwm_stream_return_periods.return_period_2[index],
+            '5_year': nwm_stream_return_periods.return_period_5[index],
+            '10_year': nwm_stream_return_periods.return_period_10[index],
+            '25_year': nwm_stream_return_periods.return_period_25[index],
+            '50_year': nwm_stream_return_periods.return_period_50[index],
+            '100_year': nwm_stream_return_periods.return_period_100[index]
+        };
+    }
+    
+    return returnPeriods;
+}
 
 // Function to load KML layers
 function loadKML(url, layerName) {
@@ -204,8 +274,17 @@ function loadKML(url, layerName) {
                     // Update river color based on current flow
                     updateRiverColor(maxflow);
 
-                    // Update the chart
-                    flowChart.data.labels = timestamps;
+                    // Format timestamps to readable format
+                    const readableTimestamps = timestamps.map(timestamp => {
+                        const date = new Date(timestamp);
+                        return date.toLocaleDateString('en-US', {
+                            month: 'short',
+                            day: 'numeric',
+                            hour: 'numeric'
+                        });
+                    });
+                    
+                    flowChart.data.labels = readableTimestamps;
                     flowChart.data.datasets[0].data = flowValues;
                     flowChart.data.datasets[0].label = `${riverName} Flow - ${forecastType.replace('_', ' ').toUpperCase()}`;
                     flowChart.update();
@@ -215,7 +294,7 @@ function loadKML(url, layerName) {
                     if (maxflow > 1400) {
                         statusCard.innerHTML = `⚠️ WARNING: Flow at ${riverName} is HIGH! Dangerous conditions.`;
                         statusCard.className = "danger";
-                    } else if (maxflow < 1200) {
+                    } else if (maxflow < 1400) {
                         statusCard.innerHTML = `⚠️ Flow at ${riverName} is LOW. Poor conditions.`;
                         statusCard.className = "caution";
                     } else {
@@ -227,6 +306,93 @@ function loadKML(url, layerName) {
                     window.clickMarker.bindPopup(
                         `${riverName}<br>Current Flow: ${currentFlow.toFixed(2)} CFS`
                     ).openPopup();
+
+                    const returnPeriods = getReturnPeriods(reachId);
+
+                    console.log('returnPeriods', returnPeriods)
+
+                    // Add a horizontal line dataset
+                    flowChart.data.datasets[1] = {
+                        label: '2 Year',
+                        data: Array(timestamps.length).fill(returnPeriods.values['2_year']), // Replace 1000 with your desired fixed value
+                        borderColor: 'green',
+                        borderWidth: 1,
+                        borderDash: [5, 5],
+                        fill: false
+                    };
+
+                    flowChart.data.datasets[2] = {
+                        label: '5 Year',
+                        data: Array(timestamps.length).fill(returnPeriods.values['5_year']), // Replace 1000 with your desired fixed value
+                        borderColor: 'yellow',
+                        borderWidth: 1,
+                        borderDash: [5, 5], 
+                        fill: false
+                    };
+
+                    flowChart.data.datasets[3] = {
+                        label: '10 Year',
+                        data: Array(timestamps.length).fill(returnPeriods.values['10_year']), // Replace 1000 with your desired fixed value
+                        borderColor: 'orange',
+                        borderWidth: 1,
+                        borderDash: [5, 5], 
+                        fill: false
+                    };
+
+                    flowChart.data.datasets[4] = {
+                        label: '25 Year',
+                        data: Array(timestamps.length).fill(returnPeriods.values['25_year']), // Replace 1000 with your desired fixed value
+                        borderColor: 'brown',
+                        borderWidth: 1,
+                        borderDash: [5, 5], 
+                        fill: false
+                    };
+
+                    flowChart.data.datasets[5] = {
+                        label: '50 Year',
+                        data: Array(timestamps.length).fill(returnPeriods.values['50_year']), // Replace 1000 with your desired fixed value
+                        borderColor: 'red',
+                        borderWidth: 1,
+                        borderDash: [5, 5],
+                        fill: false
+                    };
+
+                    flowChart.data.datasets[6] = {
+                        label: '100 Year',
+                        data: Array(timestamps.length).fill(returnPeriods.values['100_year']), // Replace 1000 with your desired fixed value
+                        borderColor: 'purple',
+                        borderWidth: 1,
+                        borderDash: [5, 5],
+                        fill: false
+                    };
+
+                    
+                    // Update the chart with return period lines instead of bands
+                    flowChart.options = {
+                        responsive: true,
+                        plugins: {
+                            legend: {
+                                position: 'top',
+                            },
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: 'Flow (CFS)'
+                                }
+                            },
+                            x: {
+                                title: {
+                                    display: true,
+                                    text: 'Time'
+                                }
+                            }
+                        }
+                    };
+                    
+                    flowChart.update();
 
                 } catch (error) {
                     console.error('Error fetching forecast:', error);
@@ -276,10 +442,22 @@ for (var layerName in layerUrls) {
                 const riverLayer = await loadKML(layerUrls[layerId].river, `${layerId}-river`);
                 map.addLayer(basinLayer);
                 map.addLayer(riverLayer);
+                
+                // Get bounds of both layers and fit map to those bounds
+                const basinBounds = basinLayer.getBounds();
+                const riverBounds = riverLayer.getBounds();
+                const combinedBounds = basinBounds.extend(riverBounds);
+                map.fitBounds(combinedBounds, { padding: [50, 50] });
             } else {
                 // If already loaded, add both layers back to the map
                 map.addLayer(layers[`${layerId}-basin`]);
                 map.addLayer(layers[`${layerId}-river`]);
+                
+                // Fit map to combined bounds of existing layers
+                const basinBounds = layers[`${layerId}-basin`].getBounds();
+                const riverBounds = layers[`${layerId}-river`].getBounds();
+                const combinedBounds = basinBounds.extend(riverBounds);
+                map.fitBounds(combinedBounds, { padding: [50, 50] });
             }
         } else {
             // Remove both layers
