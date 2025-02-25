@@ -176,6 +176,7 @@ function getReturnPeriods(reachId) {
             '50_year': nwm_stream_return_periods.return_period_50[index],
             '100_year': nwm_stream_return_periods.return_period_100[index]
         };
+
     }
     
     return returnPeriods;
