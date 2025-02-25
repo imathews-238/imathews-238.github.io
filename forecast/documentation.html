@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorado Outdoor Recreation Flow Forecast & Safety</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Colorado Outdoor Recreation Flow Forecast & Safety</h1>
+    </header>
+    <main>
+        <section class="container">
+            <h2>Overview</h2>
+            <p>This document explains the key components of the Colorado Outdoor Recreation Flow Forecast & Safety web application, including its data sources, functionality, and technical implementation.</p>
+        </section>
+        
+        <section class="container">
+            <h2>1. Cloning and Setting Up the Application</h2>
+            <p>To run this project locally, follow these steps:</p>
+            <pre><code>
+                # Clone the repository
+                git clone https://github.com/imathews-238/imathews-238.github.io.git
+
+                # Navigate to the project directory
+                cd your-repository
+
+                # Open the project in a browser
+                open index.html
+            </code></pre>
+
+        <section class="container">
+            <h2>1. Data Sources and Representation</h2>
+            <p>The application retrieves real-time and forecasted river flow data from the U.S. National Water Model (NWM).</p>
+            <ul>
+                <li>Short Range (18 hours)</li>
+                <li>Medium Range (10 days)</li>
+                <li>Long Range (30 days)</li>
+            </ul>
+            <p>The flow data is used to determine safety thresholds:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Flow Rate (CFS)</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>0-800</td><td style="color:green;">Safe</td></tr>
+                    <tr><td>800-1500</td><td style="color:orange;">Caution</td></tr>
+                    <tr><td>>1500</td><td style="color:red;">Danger</td></tr>
+                </tbody>
+            </table>
+            <p>The map includes KML layers for watershed basins and rivers.</p>
+        </section>
+
+        <section class="container">
+            <h2>2. How It Works</h2>
+            <h3>Web Services & API Calls</h3>
+
+            <p>The application uses the U.S. National Water Model (NWM) API to fetch real-time and forecasted river flow data.</p>
+            <p>The application fetches forecast data from NWM’s API based on user-selected rivers.</p>
+            <pre><code>https://api.water.noaa.gov/nwps/v1/reaches/{reachId}/streamflow?series={forecastType}</code></pre>
+            <p>reachId corresponds to the selected river. The response is processed to extract flow values and timestamps for visualization.</p>
+            <br>
+            <h3>Leaflet Map Integration</h3>
+            <p>The map initializes centered on Colorado with Leaflet.js:</p>
+            <pre><code>var map = L.map('map').setView([39.5501, -105.7821], 8);</code></pre>
+            <p>Tile Layer: OpenStreetMap provides the base layer. KML Overlays and River Points allow users to interact and retrieve data dynamically.</p>
+            <br>
+            <h3>Chart.js Integration</h3>
+            <p>Flow forecasts are visualized using Chart.js:</p>
+            <pre><code>
+                var ctx = document.getElementById('flowChart').getContext('2d');
+                var flowChart = new Chart(ctx, {
+                    type: 'line',
+                    data: { labels: [], datasets: [{ label: 'Flow Rate (CFS)', data: [], borderColor: 'blue' }] },
+                    options: { responsive: true }
+                });
+            </code></pre>
+            <p>The chart updates dynamically when the user clicks a river point.</p>
+        </section>
+
+        <section class="container">
+            <h2>3. User Interaction</h2>
+            <p>Users select a forecast type (Short, Medium, Long) via a dropdown. Clicking a river updates the chart and safety status dynamically.</p>
+        </section>
+        
+        <section class="container">
+            <h2>4. Testing & Improvements</h2>
+            <p>A peer outside the class tested the application, providing feedback on error handling, layer toggling, and UI clarity, which were implemented before final submission.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Colorado Outdoor Recreation</p>
+    </footer>
+</body>
+</html>

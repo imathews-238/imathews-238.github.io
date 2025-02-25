@@ -23,12 +23,36 @@
         <p>
             This web application provides real-time and forecasted river flow data for outdoor recreation and safety in Colorado.
             Users can check rivers to assess rafting, fishing, and flood risks in Colorado. Click on a river 
-            point to see forecasted flow rates and warnings based on safety thresholds. Flood data is provided by accessing data from the U.S. National Water Model (NWM)
+            point to see forecasted flow rates and warnings based on safety thresholds. The data is retrieved from the U.S. National Water Model (NWM) and displayed on an interactive Leaflet map with KML overlays. Users can select rivers to view flow forecasts and safety warnings based on predefined thresholds.
+
         </p>
     </div>
 
-
+    <h1>Getting Started</h1>
+    <p>To use this application, follow these steps:</p>
+        
+    <p>
+        1. Select the range of the forcast you need for your next outting from the dropdown menu. 
+            <ul>
+                Short Range: 18 hours
+                <br>
+                Medium Range: 10 days
+                <br>
+                Long Range: 30 days
+            </ul>
+        </li>
+        2. Check the layer box for the River you would like to zoom to and load.
+        <br>
+        3. Click on the river on the map and your information should load in the charts below.
+        <br>
+        4. If an error occurs try clicking the river again or reloading the page.
+        <br>
+        5. View the forecasted streamflow data and safety status on the map.
+        <br>
+        6. Have fun and be safe on your next outdoor adventure!
+    </p>
     <div class="container">
+
         <h2>Select Forecast Range:</h2>
         <br>
         <label for="reachIdInput" style="display: none;">Enter Reach ID:</label>
@@ -54,7 +78,7 @@
         </div>
 
         <br>   
-<h1>Zoom To Major Rivers in Colorado</h1>
+<h2>Zoom To Major Rivers in Colorado</h2>
 
     <!-- Map Section -->
     <div id="map-container-extra">
@@ -80,5 +104,28 @@
         <canvas id="flowChart"></canvas>
     </div>
 
+
+    <!-- About me section -->
+    <div id="about-me">
+        <h2>About Me</h2>
+        <p> This page was created by Ian Mathews, a graduate student at BYU pursuing a master’s degree in Civil Engineering with a focus on water resource engineering. My life has included experiences as a firefighter, night-club bouncer, and medical team member for downhill mountain bike tours. These diverse roles have shaped my passion for learning and experiencing new adventures.
+            This web application is a culmination of my interests in water resources, outdoor recreation, and technology. It aims to provide valuable information for outdoor enthusiasts and promote safety in Colorado's rivers. I hope you find it useful and informative.
+
+        </p>
+
+        <!-- Additional Links -->
+        <p> For More information on the NWM and how this application works or how to build your own, please see the links and references below</p>
+
+        <div class="morelinks">
+            <a href="https://water.noaa.gov/" target="_blank">NWM Dashboard</a>
+            <a href="https://imathews-238.github.io/forecast/documentation.html" target="_blank">Page Documentation</a>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Ian Mathews. All rights reserved.</p>
+    </footer>
+
+     
 </body>
 </html>
