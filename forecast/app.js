@@ -6,40 +6,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; OpenStreetMap contributors'
 }).addTo(map);
 
-// // Example River Points
-// var riverPoints = [
-//     { name: "Arkansas River", lat: 38.842, lon: -106.133 },
-//     { name: "Colorado River", lat: 39.368, lon: -107.728 },
-//     { name: "South Platte River", lat: 40.167, lon: -104.833 },
-//     { name: "Gunnison River", lat: 38.544, lon: -107.324 },
-//     { name: "Rio Grande River", lat: 37.669, lon: -106.388 }
-// ];
 
-// // Function to get marker color
-// function getMarkerColor(flow) {
-//     if (flow > 1500) return "red"; 
-//     if (flow < 1499) return "orange"; 
-//     return "green"; 
-// }
-
-// // Add Points to Map
-// riverPoints.forEach(point => {
-//     var flowRate = Math.floor(Math.random() * (5000 - 800) + 800);
-//     var markerColor = getMarkerColor(flowRate);
-//     var marker = L.circleMarker([point.lat, point.lon], {
-//         radius: 8,
-//         fillColor: markerColor,
-//         color: "#000",
-//         weight: 1,
-//         opacity: 1,
-//         fillOpacity: 0.8
-//     }).addTo(map)
-//         .bindPopup(`<b>${point.name}</b><br>Click for flow data`)
-//         .on('click', function() { 
-//             updateChart(point.name, flowRate); 
-//             getForecast(layerUrls[point.name].reachId, point.name); // Call getForecast with reachId and river name
-//         });
-// });
 // Chart.js Setup
 var ctx = document.getElementById('flowChart').getContext('2d');
 var flowChart = new Chart(ctx, {
@@ -51,7 +18,6 @@ var flowChart = new Chart(ctx, {
 // Function to Update Chart & Status
 function updateChart(riverName, flowRate) {
     var forecastType = document.getElementById('forecast-select').value;
-    var flowData = generateMockData(); 
 
     flowChart.data.labels = flowData.dates;
     flowChart.data.datasets[0].data = flowData.values;
@@ -59,10 +25,10 @@ function updateChart(riverName, flowRate) {
     flowChart.update();
 
     var statusCard = document.getElementById("status-card");
-    if (flowRate > 1500) {
+    if (flowRate > 1400) {
         statusCard.innerHTML = `⚠️ WARNING: Flow at ${riverName} is HIGH! Dangerous conditions.`;
         statusCard.className = "danger";
-    } else if (flowRate < 1000) {
+    } else if (flowRate < 1400 & flowRate > 600) {
         statusCard.innerHTML = `⚠️ Flow at ${riverName} is LOW. Poor conditions.`;
         statusCard.className = "caution";
     } else {
@@ -295,8 +261,8 @@ function loadKML(url, layerName) {
                     if (maxflow > 1400) {
                         statusCard.innerHTML = `⚠️ WARNING: Flow at ${riverName} is HIGH! Dangerous conditions.`;
                         statusCard.className = "danger";
-                    } else if (maxflow < 1400) {
-                        statusCard.innerHTML = `⚠️ Flow at ${riverName} is LOW. Poor conditions.`;
+                    } else if (maxflow < 1400 & maxflow > 600) {
+                        statusCard.innerHTML = `⚠️ Caution: Flow at ${riverName} may be Dangerous for recreation.`;
                         statusCard.className = "caution";
                     } else {
                         statusCard.innerHTML = `✅ Flow at ${riverName} is safe for recreation.`;

@@ -1,6 +1,6 @@
 
 body { font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; background-color: #f4f4f4; }
-header { background: #004466; color: white; padding: 20px; font-size: 22px; }
+header { background: #004466; color: white; padding: 20px; font-size: 36px; }
 #description { margin: 15px; padding: 10px; font-size: 16px; max-width: 80%; margin: auto; }
 #map { height: 30vh; width: 80%; margin: 20px auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
 #controls { margin: 10px; padding: 8px; }
